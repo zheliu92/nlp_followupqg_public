@@ -1,0 +1,602 @@
+[
+  {
+    "id": 13094,
+    "question": "ELI5: How does an internal clock within a DSLR/computer camera work?",
+    "answer": "For some weird reason, if you apply electricity to certain crystals, they vibrate with fairly consistent frequencies.   We can make devices that count the number of times the crystal has vibrated. So if the crystal is one that vibrates roughly 16,000 times per second, we can connect that counter to a device that counts up to 16,000 then sends a signal. Every signal represents 1 second passing. Now that we have a device that can count seconds (or fractions of a second), we can make a clock! (This is how digital watches work!)  So basically DSLRs and computers have tiny digital watches inside without a screen.   This isn't always super accurate. Cheaper crystals and mechanisms aren't exactly perfect. If I leave my Nintendo Switch disconnected from the internet, it's usually 2-3 minutes off of the \"correct\" time within 24 hours. That's why most computers and devices today have an option to either use internet time services or GPS to keep their time updated. GPS and internet time services use SUPER accurate clocks to keep time, so periodically syncing with them keeps the device \"on time enough\".",
+    "follow-up": "What role does the microprocessor play in the functioning of a DSLR's internal clock?"
+  },
+  {
+    "id": 20709,
+    "question": "ELI5: Why can't the human body break down gasoline in the stomach?",
+    "answer": "Your body didn\u2019t evolve to do so. Ethanol is a naturally occurring substance, just leave some fruit for too long and you got a good amount. We had to evolve ways to break down that poison because if we didn\u2019t we would die easily from eating slightly off food.   Gasoline is found deep, deep underground as part of crude oil. Sure, it has a lot of energy, but we never had occasion to need to evolve enzymes to break it down.",
+    "follow-up": "What makes hydrocarbons in gasoline structurally different from natural compounds?"
+  },
+  {
+    "id": 10373,
+    "question": "ELI5: How do sailboats sail if the wind isn\u2019t directly behind them? How about if the wind is coming from the front or perpendicular? Do they just sit there and wait?",
+    "answer": "This is why you can turn the sail. You orient the sail so that it catches the wind, and then you have a centerboard which is a big flat piece of material sticking down into the water from the bottom of the boat.  The centerboard helps transfer directional force on the sail into forward motion for the ship because it only wants to move through the water the skinny way.",
+    "follow-up": "What is tacking and why is it used in sailing?"
+  },
+  {
+    "id": 18763,
+    "question": "ELI5 - Why do camels spit? And what is it that they are actually spitting out?",
+    "answer": "It's not exactly spitting, more like regurgitating. They're throwing up whatever is in their stomach along with saliva. It's akin to humans shoving a finger down their throat to puke, except that they don't need to shove anything physically.  Why do they do it? It's an act of defense against predators whenever they feel threatened by any creature.",
+    "follow-up": "Are there specific circumstances under which camels are more likely to spit?"
+  },
+  {
+    "id": 19654,
+    "question": "ELI5: What did Tesla mean by \"if you wish to understand the universe, think of energy, frequency and vibration?\"",
+    "answer": "When Tesla said \u201cthink of\u201d he meant rigorously. Tesla thought in ways that created functioning machines - ie rigorous and realistic ways.    I would recommend taking courses on the resonant frequency of structures, on signal theory, on physics where energy calculations are used, things like potential energy and energy flux.    If you\u2019re in college, find these courses in the syllabus. Or if you\u2019re not in STEM and don\u2019t know where to start, go to a STEM student or prof and help them find you classes where you\u2019ll learn about those things: resonant frequency, signals, energy-based physics (such as calculating the height a roller coaster will go based on potential energy instead of based on velocity and acceleration), thermodynamics, waves.    And if you\u2019re \u201cbad at math\u201d, change your self-conception and push yourself to get better. Math is about practice more than it is about talent. And math is necessary to really, truly appreciate the beauty of these ways of thinking. So make friends with math.    If you\u2019re not at a university, use Khan academy or any university\u2019s free online courses to study this stuff.     The key point is to study it rigorously - this means homework and math, not just reading a popular science book about the mysteries of the universe.    Just like a musician needs to play his scales, someone who wants to experience the beauty that Tesla is referring to needs to do his math homework.",
+    "follow-up": "How does the relationship between energy, frequency, and vibration influence technological innovations?"
+  },
+  {
+    "id": 15478,
+    "question": "Eli5 how do \u201cgut\u201d feelings work, what tells us that a person/situation is off and potentially dangerous without consciously thinking about it?",
+    "answer": "Because we are all connected by the Force, through a grand human consciousness, through God, latent telepathic powers, what have you. You are sometimes able to tap into this network and receive more information than you could otherwise normally be expected to have. I'm comfortable just saying it's God but I realize that other people have other explanations for this.",
+    "follow-up": "How does subconscious information processing contribute to the formation of gut feelings?"
+  },
+  {
+    "id": 10555,
+    "question": "ELI5: What makes downloading unlicensed media illegal?",
+    "answer": "My understanding is:  The downloading isn't so much the crime. But essentially you haven't paid the owner of the rights to the material so it is considered theft. And therefore illegal.   By downloading you are still creating a copy of the material.   However the uploading is the bigger crime. Also by taking out uploaders there is nothing to download from.  Similar to drugs, target the dealers not the users. And the issue will go away. (that's the theory anyway?)   I am not a lawyer though!",
+    "follow-up": "How do unlicensed downloads disrupt the business models of content-producing industries?"
+  },
+  {
+    "id": 20421,
+    "question": "ELI5: what is it that makes women sound female and men sound male even when they talk at the same pitch?",
+    "answer": "Sounds consist of more than one frequency that are all (usually) multiples of the fundamental. When you say they are all the same pitch you are saying they have the same fundamental frequency, but they will have different levels of harmonics that all add up to make the voice's waveform.So the difference between men and a women singing the same exact note and sounding markedly different is due to the amplitude (strength) and phase (delay) of the harmonics that the voices also creates, that have frequencies of 2x, 3x, 4x, etc the fundamental frequency.  EDIT : I just realized OP asked for biological answer, then there's already some explanation on another comment. My answer is more like physics and mathematics.  Actual ELI5 : Hershey's and Kit Kat taste different but they're both chocolate. That is because both of them have the same main chocolate ingredients (fundamental frequency) and different additional ingredients like sweetener, peanut, milk, etc (harmonic)  Read more: [https://en.wikipedia.org/wiki/Timbre](https://en.wikipedia.org/wiki/Timbre)",
+    "follow-up": "Can you explain how the length of the vocal tract influences voice resonance?"
+  },
+  {
+    "id": 12623,
+    "question": "ELI5, why do you make a well (hole) in the center of flour (and/or other dry ingredients) when baking to put wet ingredients in?",
+    "answer": "Because otherwise they'll spill out of the prep area.  Water is a bit of a glue and sticks to materials, unlike other liquids such as liquid [mercury](https://www.youtube.com/watch?v=ZiWlthrtneU) for example.  Your hands get wet because water sticks to them (like a glue); your hands will NOT get wet if you stick  them in mercury.  But water won't stick to flour, it's too porous, and will thus \"roll off\" the flour area / prep area, if it's flat.  Thus they make a hole in the center, so that it forms a bowl and gravity keeps the liquid there.",
+    "follow-up": "What are some common mistakes that might be reduced by using the well technique in baking?"
+  },
+  {
+    "id": 13180,
+    "question": "ELI5: Why is it that accents can be noticeably different/unique between cities, even when the locations are nearby to eachother?",
+    "answer": "A combination of things, including the fact that what is nearby today was far away until quite recently, when the maximum speed of sustained travel was a few miles an hour unless you were switching mounts. Further, there is a bit of in-group dynamics, having an accent is a sign of belonging to a select group and can be a badge of pride.",
+    "follow-up": "How might occupational types within a city influence its accent?"
+  },
+  {
+    "id": 5230,
+    "question": "ELI5: how does an RSA token get out of sync?",
+    "answer": "It has a tiny, battery powered clock inside.  The device is not expensive, and that limits the precision of the clock inside.  The Host has access to extremely accurate time, so sync problems are certain to occur if you wait long enough.  The RSA design has enough tolerance built into it that the design life of the battery is less than the likely time to get out of sync.  Some batteries are extra good, some tokens are subject to unusual stresses, stuff can happen.",
+    "follow-up": "How does the internal clock of the RSA token generate authentication codes?"
+  },
+  {
+    "id": 12564,
+    "question": "ELI5 Why does it take longer to get to the Moon than to get back ?",
+    "answer": "When you launch from Earth you have to fight gravity which accounts for a small portion. When you get to the moon you have a target landing spot that takes time to locate and then position the craft for landing and make a soft touchdown. When leaving, you just launch when the orbital capsule is at peak target distance. Then you hook up and fire the rockets from very little gravity and begin the trip home. Once you reach earth you do have a target range but your flight is calculated to take you right to the ocean where ships are waiting.   Like going to the store\u2026 you have to get there then search for a parking spot which can take time. But leaving is straight out of the lot and home.",
+    "follow-up": "What are trajectory corrections and why are they needed for a lunar landing?"
+  },
+  {
+    "id": 18333,
+    "question": "Eli5: Why do automobiles operate with diesel or petrol but not with water?",
+    "answer": "As much as I know about combustion engines and hydrogen, I have encountered so many different reasons as to why they never took off.  So I'm following to see if there is a proper answer. Fingers crossed.",
+    "follow-up": "Why is electrolysis considered impractical for extracting energy from water?"
+  },
+  {
+    "id": 15261,
+    "question": "eli5 If you take a fish outside of its aquarium every day for a limited time to train it to survive outside water, will it ever develop such ability or its children?",
+    "answer": "Evolution takes a very very long time to actually be effective.  You cant just take one fish and train it to do something and hope its offspring develop immunity.   The whole lineage needs to be affected, all at once.",
+    "follow-up": "What role do natural selection and genetic mutations play in the evolutionary process?"
+  },
+  {
+    "id": 17964,
+    "question": "ELI5: How are satellites put into orbit and how often does this happen?",
+    "answer": "Space junk animations are not to scale.  Space is flippin huge and satellites are small compared to space.  Even buss sized satellites are small compared to how much room there is.  Plus satellites are at different altitudes.  In fact you could spend your while life on a satellite and never see another satellite.",
+    "follow-up": "What innovations by private industry have influenced recent trends in satellite deployment?"
+  },
+  {
+    "id": 18608,
+    "question": "ELI5: What prevents someone from betting $1 on every NFL team to win the super bowl, at the beginning of the season where the odds are all pretty good?",
+    "answer": "Go for it. You'll lose money in the long run.  There's 32 teams, so that's a $32 bet. You'd need one of the teams with odds greater than +3200 to win for you to make money. Otherwise, you'd lose.  If I bet $1 on a team with +350 odds, I will win my $1 back plus an additional $3.5 dollars. That doesn't offset the $32 I spent on the other teams.",
+    "follow-up": "How does the payout structure of sports betting dissuade betting across all teams in order to secure a profit?"
+  },
+  {
+    "id": 20157,
+    "question": "ELI5: Why does a debit increase an asset account?",
+    "answer": "You would not be left with $5k, you would be left with $15k.  You don't debit \"from\" an asset account, you debit \"into\" it.  A credit to an asset account is taking \"from\" it.",
+    "follow-up": "What other types of accounts, besides asset accounts, are affected by debits and credits?"
+  },
+  {
+    "id": 3243,
+    "question": "ELI5: Why electric cars don't use removable batteries?",
+    "answer": "It's doable from a technical perspective, but it now means that you have to dramatically increase the total number of batteries in circulation as you need more than one for each vehicle on the road. Batteries are already a pretty extreme production and cost concern (roughly half the value of an EV is just the battery), and increasing the number of battery packs would inevitably mean increasing costs for the consumers who buy the EV.",
+    "follow-up": "What kind of infrastructure investments would be necessary for a widespread network of battery swapping stations?"
+  },
+  {
+    "id": 8141,
+    "question": "eli5 - how did the ring around saturn form?",
+    "answer": "Two competing theories.  One is that the rings were once a moon that entered the planets Roche limit, the point in which the main bodies tidal forces overpower the moons own gravity and it's pulled apart.  The second is that it's left over material from the formation of Saturn that never fell into Saturn but was too close to form into a moon in the first place (because of the Roche limit)  They first means the rings weren't always there, and their age would be unknown and thus it's possible they may decay at some point.  The second means the rings were always there, and are stable enough to last 4.5 billions years, implying they are going nowhere.  Edit:  I just remembered, the rings are shrinking, and have a life expectancy of 100-300 million years and this likely points to the moon hypothesis.",
+    "follow-up": "How do micrometeorite impacts affect the rings of Saturn?"
+  },
+  {
+    "id": 14406,
+    "question": "ELI5: Why does water going up your nose sting, while steam (vaporised water) feels good on the nose?",
+    "answer": "Tap, lake, and pool water is not the same pH and salinity as the fluids in your body, causing it to leech out electrolytes from the various membranes in your sinus cavity. That is the burning sensation you feel.  A blocked nose happens when the mucous membrane inside your nose/throat expels some waste (as a result of fighting the infection). This waste is basically snot, and it is thick (to coat the infection and not let it spread).  Breathing in steam - hot humid air - thins out the snot and makes it easier for it to flow out / be blown out.",
+    "follow-up": "How does the hydration process of steam differ from that of liquid water in terms of impact on nasal membranes?"
+  },
+  {
+    "id": 25047,
+    "question": "ELI5: what needs to happen before we can unmask safely?",
+    "answer": "There are two answers. Neither of them very clear. One personally, and two society-wise. Both depend on risk. The first to your self , the second as a group.   Your risk is based on how likely you are to actually cross paths with someone infectious and how likely that is to cause you serious harm. So are you in an at risk group and where are you are considerations.   The second - how likely you are to be part of a chain of infection, how at risk are the people around you and how well society - such as the health service is coping.   Masks not perfect and life always holds a risk. In the West we have never masked up for flu which kills thousands of people a year - around 20,000 in the U.K. annually I think - though we vaccinate the at risk. Possibly COVId may have some nasty long term consequences even if you dint get seriously ill. But if the consequences of COVID dropped to equivalent to flu , then it would hardly be unreasonable to behave in a similar way. I say that nit to suggest we wait till then ( if it ever happened) but as a comparative starting point. No one can really say at what precise point in infections and consequences between that \u2018flu\u2019 point and the worst of COVID is the point at which we are \u2018safe\u2019.   I expect government ps will come up with a balance of infection rates, hospitalisations and economics with a dose of politics.   Bear in mind that in the East people regularly wear masks on public transport so as either not to do catch viruses or not to spread them , I guess it\u2019s just considered normal hygiene even for colds.   That\u2019s a long winded way of saying that presuming you are not mandated by the governments and pretty much everyone has had access to a vaccine you will have to decide whether you feel either at risk yourself, or feel that you need to still protect other people.   Personally I feel like the vaccine plus some lowering of case rates make me feel safe enough - but I wear one sometimes out of consideration to people around me who are still wearing them or in particularly crowded and enclosed environments or both.",
+    "follow-up": "What are the benefits of using transparent face shields as an alternative to masks?"
+  },
+  {
+    "id": 9254,
+    "question": "ELI5: Why isn\u2019t petrol going to blow a car up like in a film?",
+    "answer": "Gasoline doesn\u2019t burn as a liquid. It must be turned into a vapor or atomized somehow. A rag s a good way to promote vaporization, but it takes time. Having an electric fuel pump spray gasoline out of a cracked fuel line is the most common cause of vehicle fires.",
+    "follow-up": "How do modern formulations of automotive fuels contribute to controlled energy release?"
+  },
+  {
+    "id": 20198,
+    "question": "eli5: What is confusion?",
+    "answer": "In many cases it is because of sensory overload. It's what happens when the brain gives up processing the input correctly.",
+    "follow-up": "How do excessive and insufficient information contribute differently to confusion?"
+  },
+  {
+    "id": 12934,
+    "question": "ELI5 What is a migraine, compared to a what one normally thinks of as a headache?",
+    "answer": "A headache is just that, a headache.  A migraine is a neurological condition that can come with fat more complex symptoms. these will often include a headache as an obvious one, but not always, and will often include other effects too.  Personally I can experience an aura distorting my vision (like looking at everything through the pattern made by the transporters in the original star trek), sickness, and numbness travelling through my arms and face alongside the headache (which is also a different type of headache, like a pressure behind the eyes).  Other people also experience things like a sensitivity to light or noise, and undoubtedly other things I am not aware of.  Some people have obvious triggers like certain foods or stresses, others are more of a mystery.  If I get a migraine, that is me often shut down for a day or more - the auras starting give me only a few minutes to stop doing things like driving before it becomes dangerous, and then I can be left dealing with the headache and vomiting for a significant period and unable to do anything else other than hiding in bed and trying to sleep through as much as possible. So no, not just a headache I can power through, but a complete show stopper for that day, and one that can cause major problems if I am not at home (or able to get a lift there within half an hour or so).",
+    "follow-up": "What are some common triggers for migraines?"
+  },
+  {
+    "id": 19350,
+    "question": "ELI5: Denmark is considered to have the world's best healthcare system out of any other country and only pays $3,827 per person on healthcare. The US isn't even on the top 10 list for countries with the best healthcare system yet it pays the most per person on healthcare. How is this possible?",
+    "answer": "The answer is more simple than other people posting here would have you believe.  It's a for-profit system.  You are paying more, because there is a profit incentive for everyone all up and down the supply chain, for every aspect of your healthcare.  They all want their cut...which means you will be paying for those mark-ups.  If it weren't for the profit motive, you would be paying \"at cost\" rates for everything.",
+    "follow-up": "How does the profit motive in the U.S. healthcare system affect the cost and quality of care?"
+  },
+  {
+    "id": 15499,
+    "question": "ELI5: I've noticed that most animals have nearly perfect teeth. Why do our teeth suck?",
+    "answer": "My senior dog has had 4 teeth removed and also had two cleanings prior to the extractions. They say now dogs need cleanings every year which I\u2019ve only learned about in the past 5-6 years.  Humans eat ALOT of sugar. There is sugar in almost everything. Ie: milk, bread etc. that coupled with the purified water rise, which removes fluoride and magnesium from (tap)drinking water, contributes to cavities and magnesium deficiencies.",
+    "follow-up": "How do smaller jaws contribute to overcrowded and misaligned teeth?"
+  },
+  {
+    "id": 24446,
+    "question": "ELI5: If 35mm film can be scanned up to 4K, does that mean I could have old film rolls from my cheap 1990s photo camera scanned to 4K?",
+    "answer": "the lens probably didn't get you a 4k image. the high quality image that the film records would be the blurry image produced the cheap lens. image quality is limited by the weakest link which in this case is the plastic lens.   in other words... it won't be any clearer than the photos would have been when printed back in the 90s.",
+    "follow-up": "How does the quality of the camera and its lens influence the final image quality?"
+  },
+  {
+    "id": 1277,
+    "question": "ELI5 - Why does water increase the friction between my foot and the sock I'm trying to put on, but decreases friction between my foot and the bathroom floor?",
+    "answer": "because the water in the sock pushes out the air.  The air is what acts as a spring between threads keeping only a minimum of threads touching the foot.  Add on the water, now every thread is madly in love with your skin.",
+    "follow-up": "What does \"interlocking of surface roughness\" mean?"
+  },
+  {
+    "id": 10865,
+    "question": "ELI5: What's the difference between the law of large numbers and the law of averages?",
+    "answer": "If a disease only kills 1% of the population, it will be argued that it's not a big deal. But when that population is 300,000,000 people, you're talking about a disease that can kill 3 million people, a large number that shouldn't be ignored.   In other words, a statistically small average, when applied to a huge number is a huge number.   Another way to look at is if you roll a die. Each roll has a 1/6 chance of landing on the number 4. But if you roll it a million times, you'll get the number 4 over 150,000 times.   1% chance of dying by a certain disease sounds like it's not a big deal. But if everyone in the country was given a 100 sided die and told if they roll the number 54, they're dead, would you want to play that game?",
+    "follow-up": "How does the law of large numbers ensure predictability in long-term experiments?"
+  },
+  {
+    "id": 13361,
+    "question": "ELI5: How do sewer systems not get clogged all the time?",
+    "answer": "It\u2019s also the size of piping in the sewers. Your gutters compared to the items clogging it are a lot closer in size than your poop and toilet paper is compared to the size of the sewer pipe in the streets. Your lateral (hookup from the house to the street) has the best chance of plugging because it\u2019s only a few inches wide. But once beyond that, you can have from 12\u201d to many feet in diameter before it hits your sewage treatment plant. It can clog but if your semi solids are the only thing going it, it would take a lot.   But that is exactly why you are not supposed to flush wipes down the toilet. Since they don\u2019t degrade in the water, they can clump together and clog stuff. Don\u2019t flush anything but pee, poop, or toilet paper.",
+    "follow-up": "How do maintenance workers access the sewer system for inspections and interventions?"
+  },
+  {
+    "id": 2969,
+    "question": "ELI5 What are moles and what are they for?",
+    "answer": "A mole is just a number. It's a specific number, 6.02x10^23, which happens to be a very large number.  Sort of like how \"A dozen\" is a number that means 12. If I ask you to get me a dozen bagels, you know I want 12 bagels. If I ask you to get me a mole of hydrogen atoms, you know I want 6.02x10^23 hydrogen atoms.  What the 1.008 grams means is that 1 mole of hydrogen weighs 1.008 grams. You can have a .0005 g sample because that's less than 1 mole...",
+    "follow-up": "How does using moles provide a common ground for comparing different substances?"
+  },
+  {
+    "id": 8581,
+    "question": "ELI5: How does 48hr deodorant work? Why do the directions say to apply at night time \u201cto take advantage of your body\u2019s natural temperature variations\u201d?",
+    "answer": "Bear in mind, any claim that is sufficiently vague doesn't have to actually be based on anything, according to regulations about what products can say about themselves. I'm not sure that the temperature of your body or the time you put it on will make all that much of a difference, though I suppose it is possible.   That said, assuming this is also antiperspirant and not just deodorant, most of them work by stopping sweat from coming out of the sweat glands.",
+    "follow-up": "What role do antibacterial agents play in the formulation of deodorant?"
+  },
+  {
+    "id": 15654,
+    "question": "ELI5: How do Spectrum analyzers work, what is their real world application and why are they so common with \"ghost hunters\"?",
+    "answer": "Spectrum analysers often work based on something called the Fast Fourier Transform.  This is a mathematical technique which lets us look at a wave, let's say the sound of a lion's roar, and instead of looking at how it changes over time (like having a loud beginning, slowly getting quieter, and a few grumbles at the end), asking what other waves it is made of.  That feels like a big jump, but it's simpler than you think. Sticking with sound, you may know that the pitch of a sound is determined by something called it's frequency. This is mostly true, but it's not the full picture. Sounds are made up of lots and lots of frequencies all added together. This is what makes a violin sound different to a flute if they're playing the same note. What this means is that if you take a very simple wave which genuinely only has a single frequency, called a sine wave, and start adding very special amounts of other waves of very specific frequencies, you can actually build sounds from scratch - this is called \"additive synthesis\", by the way.  What the Fast Fourier Transform does is tell you exactly what amount of *all* frequencies have gone into making whatever wave it's looking at. This is sometimes called a \"decomposition\", because it is looking at what the wave is composed of.  Why is it associated with ghost hunters? Because they need some bullshit to hook people's attention and these things look cool and technical and a good storyteller can make a story out of it.",
+    "follow-up": "What are some examples of signal interference that spectrum analyzers can detect?"
+  },
+  {
+    "id": 3803,
+    "question": "ELI5: How has type 1 diabetes survived?",
+    "answer": "I was diagnosed last year at the age of 24.  Lost damn near 90 lbs over the course of 3 years and had other health issues before I went and got checked out.  It happens kinda randomly. My immune system mistook my beta cells with is what produces inlsuin in the pancreas and basically destroyed them all.  Without outside insulin I would probably die a early death and have worse feet and leg problems than I already do.   Type 1 and 2 diabetes ( in my non medical profession opinion) are separate illnesses that are often confused together.",
+    "follow-up": "Why might type 1 diabetes symptoms appear only after reproductive age?"
+  },
+  {
+    "id": 5462,
+    "question": "ELI5 : how an underwater gas leak created an \u00ab eye of fire \u00bb in the Gulf Of Mexico ?",
+    "answer": "Gas rose from a busted pipe through the ocean. When the gas leaves the ocean it can then catch fire and seemingly make it look like the water is burning when it's actually just the gas burning.   Nitrogen helps because fire needs oxygen. They use the nitrogen to displace the oxygen away from the gas so that it cannot burn. After closing the valve of course, or risk reignition.",
+    "follow-up": "What measures can be taken to prevent the ignition of such gas leaks in the future?"
+  },
+  {
+    "id": 20802,
+    "question": "[ELI5] Is flying a plane hard? In terms of difficulty, is it comparable to driving a car?",
+    "answer": "It really depends on what type of plane your are talking about and the level of auto pilot that your plane has. But regardless yes it is more difficult than a car:  Controls: Steering is far more like a boat than like car only you have elevation as well. I'm sure other redditors will go into greater detail but your controls are far more complex and if you are relying on the auto pilot you need to understand how to read and program that specific autopilot exactly. You can't learn to fly a Boeing 737-400 and then go fly a Boeing 737-800 - you'd have to go specifically retrain (Boeing 737NG course).  Navigation: In a car you are driving on a road with road markings and road signs and nowadays with extremely an useful GPS lady to guide you along. A huge part of flying is navigating as there's no signs up in the air to guide you along. And with weather conditions you have to learn to navigate by instrumentation alone.  Radio: This is the reason I could never be a pilot - I do not understand what is being said over the radio and you cannot fly safely without having proper communication and radio discipline. You have to be listening closely at **all** times because there's no way to fly safely without listening out for air traffic control constantly.  Safety: If your aircraft experiences any problem in air you can't simple pull over and open the hood. Therefore every single of aspect of flying involves safety checks and doublechecks. And these are not things that you can skip like when you pull your car out in the morning and you don't checked for punctures. You must follow specific checklists each flight in particular order.",
+    "follow-up": "What potential hazards must pilots account for during their pre-flight planning?"
+  },
+  {
+    "id": 4130,
+    "question": "ELI5: Why aren\u2019t there universal parameters for online passwords?",
+    "answer": "On the other hand, if there \\*was\\* some sort of universal password system on all sites, hackers would know exactly what setup to target with any brute force hacking approach. Not to mention that people who are going to write down their passwords would probably otherwise have picked something really weak anyway, so it doesn't make much difference.",
+    "follow-up": "What makes the \"landscape of cybersecurity threats\" continuously evolve?"
+  },
+  {
+    "id": 7879,
+    "question": "ELI5: Why does drinking more water seem to help with all sorts of health issues?",
+    "answer": "Most people don\u2019t drink enough water. Many of the things you listed can be attributed to dehydration which is solved by hydration.",
+    "follow-up": "Why is water important for metabolic processes like converting food into energy?"
+  },
+  {
+    "id": 4027,
+    "question": "eli5 Why can we see the moon during the day and at night as well?",
+    "answer": "Earth travels in a circle around the Sun. Each lap around the sun takes 1 year, or 365 days. Every day, the Earth spins 1 time. We see the sun during the day when the part of Earth we are on is facing the sun, and we cannot see the sun at night because we are facing away from it.  The moon travels in circles around the Earth just like Earth travels around the sun. However, the moon o ly takes 1 month, or about 30 days, to make 1 lap around Earth.  We can see the moon at night some days and during the day other days because the sun and moon move across our sky at different speeds, so the times we see each one don't exactly match up.  Think of two racecars going around a circle track. If one car goes a little faster than the other, we will see it pass in front of us more times than the other car. But sometimes, both cars will happen to pass in front of us at the same time.",
+    "follow-up": "What role does the angle of sunlight play in the moon's visibility?"
+  },
+  {
+    "id": 12030,
+    "question": "ELI5: Why do certain foods like chili, pasta sauce, some soups, etc. taste more delicious the next day?",
+    "answer": "Most people will tell you it\u2019s because the flavours infuse when left for a day or two.   I think in most cases the primary factor is that you\u2019ve had a period of \u2018detachment\u2019 from the cooking process by leaving it for a day, so you can kind of enjoy it more - as if someone else has cooked it for you.",
+    "follow-up": "How do enzymatic reactions contribute to the richness of flavor?"
+  },
+  {
+    "id": 23660,
+    "question": "ELI5: Do patients with transplants from other people have to take immunosuppressants for rest of their lives or does their body adapt over time?",
+    "answer": "Immediately after for around a year I took a medium dose of immunosuppressants, but my donor was a family member so the match was pretty good, people who receive a lesser match will go on a higher dose straight after.   Slowly the doctors will reduce the amount to balance the rejection level to find the happy medium between rejection and your bodies acceptance of the organ.  I\u2019m three years into a kidney transplant and take quite a low dose now. And luckily have had zero rejection, people can go into an episode of rejection and at that point you get to the hospital as fast as you can, they dose you back up with a massive amount of anti rejection drugs and immunosuppressants and then once the rejection is back under control, start the whole balancing act again.  Source: I have 3 kidneys, two that I was born with and a third I borrowed from a family member.",
+    "follow-up": "Why might a transplanted organ be considered a foreign tissue by the immune system?"
+  },
+  {
+    "id": 22221,
+    "question": "ELI5: When was the first airport developed that was available for the common citizen to use, and what were they like?",
+    "answer": "The first commercial airports were actually for lighter-than-air aircraft.... blimps! They were established in Germany and german blimps (Zepplins) were used as passenger liners",
+    "follow-up": "What were the key features of early aviation pioneers' airfields like College Park Airport?"
+  },
+  {
+    "id": 8927,
+    "question": "ELI5: How does perfect pitch work? Can you learn it?",
+    "answer": "For people with perfect pitch it's as natural as for you to say \"This is blue. This is red.\" They just know straight away. You can not learn this skill, but you can train yourself to remember a pitch in different ways, eg I can hum a note and I know its always approx G. Then just quickly transpose what I'm hearing.",
+    "follow-up": "Why is it generally harder for older individuals to develop perfect pitch?"
+  },
+  {
+    "id": 18811,
+    "question": "ELI5: What are those little bumps you sometimes get in your mouth and why do they form?",
+    "answer": "Could be herpes. You personally might be a chaste and upstanding citizen, but most of humanity after a certain age carries some form of herpes.",
+    "follow-up": "What are cold sores, and how do they form from the herpes simplex virus?"
+  },
+  {
+    "id": 11686,
+    "question": "ELI5: Why is it convention for websites to use boxes for questions with multiple answers, but dots for questions with single answers?",
+    "answer": "They are two different types of controls.  The check boxes are independent, and you can check multiple boxes.  The dots are called radio buttons, and when they're grouped together you can only check one.  Checking another will uncheck the previously checked one.  Since that functionality has already been built into the controls, it means less coding for the web designer.",
+    "follow-up": "How does the use of checkboxes and radio buttons adhere to accessibility principles?"
+  },
+  {
+    "id": 7153,
+    "question": "ELI5 what is the worst that is likely to happen if no one on a flight puts their phone on airplane mode?",
+    "answer": "You'll annoy some Pilots and Air Traffic Controllers.  Phones are really noisy on certain frequencies that pilots and ATCs are hearing.  So while the plane isn't going to crash... do you really want to annoy the folks trying to keep it that way?",
+    "follow-up": "Why are takeoff and landing considered critical phases in terms of potential interference?"
+  },
+  {
+    "id": 17377,
+    "question": "ELI5: What is happening when a chiropractor cracks a patient\u2019s neck/back?",
+    "answer": "Nitrogen gas builds up in the pockets of a joint and with enough movement these joints open up enough to allow some out, making the noise.",
+    "follow-up": "Why is proprioception important for physical stability?"
+  },
+  {
+    "id": 15613,
+    "question": "ELI5: how does alcohol dehydrate a person? Is it through the actual act of drinking or that it makes you urinate more and you don\u2019t replenish with water?",
+    "answer": "The other comments about alcohol being an antidiuretic hormone inhibitor are correct but a study I can't find atm found that upto 4% alcohol still hydrates you as the ~96% water you're drinking outweighs the keeping less water. And really you're only going to the loo more because you're often drinking a lot of liquid when out drinking.",
+    "follow-up": "How does the body normally maintain electrolyte balance, and how does alcohol disrupt this process?"
+  },
+  {
+    "id": 10466,
+    "question": "ELI5: Can there be a machine that\u2019s an \u201canti-lightbulb\u201d?",
+    "answer": "There are two answers to this question: No, because light doesn't work that way; *or* Yes, but it's Complicated.  On the \"no\" side, you have the fact that light, as a form of energy, can neither be created nor destroyed. It just moves around from place to place. (This is called the \"conservation of energy.\" For complicated math reasons, the fact that physics works the same if you \"run\" time forwards or backwards *requires* that energy cannot be destroyed.) So, as others have said, you could use something like a black hole to suck up light, but that's just shunting the light into that space, which isn't really the anti-lightbulb with a darkness aura around it like you are asking for.  On the \"yes\" side, there is a very complex, very difficult way that could *theoretically* work, but it would require much more advanced technology than we possess. This is because light is made of tiny wave-packets, which we call photons. Each photon, theoretically, has a perfect equal and opposite: one with the same amplitude, but exactly reversed peaks and troughs (high and low ponts) in the wave. If these waves meet perfectly, so each high part of one wave is exactly where the corresponding low part of the other wave is, then the effect is cancelled out, and it will be as if there is no photon present at all. Then they will pass by each other and be detectable again. If--and this is a very BIG if--you could make a device that could *exactly* match the incoming photons with its own outgoing photons, you could make an anti-lightbulb that would create a halo of unlit space around itself. This would be very, very difficult however, and we probably do not have computers good enough to calculate which light needs to go where *fast enough* to make one work, even in an extremely rigidly controlled environment.  However, while doing this with *light* is very hard, doing it with *sound* is actually (sort of) possible! As an example, think of being at a concert, where the same sound waves are being sent out of two different speaker units. If those speaker units are positioned correctly, there will be points where the sound waves from one speaker will exactly cancel out the sound waves of the other speaker, meaning a microphone at that point would hear (effectively) silence. The effect is not perfect silence normally, because in the real world, objects have volume, whereas the place where the waves cancel out is (in theory) a single point. But you can absolutely experience these points of silence in the real world! You can also get the exact opposite phenomena, where sound gets reinforced to become louder than it would be otherwise, because the two waves *stack* their high parts right on top of each other (same for the low parts).  The formal physics term for waves that cancel out is \"destructive interference\" (the two waves combine to make a \"weaker\" wave), and for waves that amplify it's called \"constructive interference\" (the two waves combine to make a \"stronger\" wave).",
+    "follow-up": "What is meant by \"wav-packets\" in the context of photons?"
+  },
+  {
+    "id": 12737,
+    "question": "ELI5: why does the fifth amendment exist?",
+    "answer": "Let's say you were called up to testify in your own trial. Without such a protection, you could either...  - Be honest, and get yourself convicted. - Lie, and have a perjury charge added on. - Refuse to answer, and be held in contempt of court.",
+    "follow-up": "What role does due process play in the Fifth Amendment?"
+  },
+  {
+    "id": 18613,
+    "question": "ELI5: What is the point/difference of using coffee creamer instead of milk?",
+    "answer": "Coffee creamer is shelf-stable and light...much easier to store, much more portable. Milk needs a fridge.   I have absolutely no idea why you'd use \\*both\\* in one drink, unless you just really like that particular flavour profile.",
+    "follow-up": "Can you describe the types of sweeteners typically used in coffee creamers?"
+  },
+  {
+    "id": 9000,
+    "question": "ELI5: How instant is instant death?",
+    "answer": "Dramatic blood pressure drops will make a person unconscious. If the disconnect between the heart and brain is large enough (like severe damage to the heart or sliced neck arteries) the person goes unconscious before they might be declared officially dead\u2026. But the time between the two would be maybe a few seconds.",
+    "follow-up": "How do forensic pathologists assess the extent and nature of injuries to align with legal standards of instant death?"
+  },
+  {
+    "id": 7313,
+    "question": "ELI5: Why is music in movies always so loud?",
+    "answer": "It's because you're listening to audio mixed for a 5.1 or higher surround sound system and your TV is 2.0. 5.1 and higher expect a center channel for voice which your TV doesn't have.  Your TV likely has settings to try to mitigate this, or you can check in the language settings of your streaming service or DVD for a 2.1 surround option.",
+    "follow-up": "Why is it important to balance dialogue, sound effects, and music in movie audio mixing?"
+  },
+  {
+    "id": 18317,
+    "question": "ELI5: How did \"s\" become the letter that pluralises nouns (\"one apple, ten apples\") in so many languages?",
+    "answer": "fun fact, in Afrikaans we use 'e' instead of 's' (most of the times):  hond = honde  muis = muise  tand = tande  deur = deure",
+    "follow-up": "Why did the English language favor the \"-as\" ending in Old English?"
+  },
+  {
+    "id": 15446,
+    "question": "ELI5: Why we use different size of wire sizes and quantities for different applicants?",
+    "answer": "The guy under answered the thickness question, when we use many wires it's because we use them for connecting devices that communicates, like in Ethernet cable we have 2 twisted pairs, many cables use more then one line because you may want to sand not only power but data",
+    "follow-up": "What are the potential consequences of using undersized wires in electrical systems?"
+  },
+  {
+    "id": 1039,
+    "question": "ELI5 how do the cameras work that can see through clothing?",
+    "answer": "Not an expert so ill give you an educated guess until someone gives better details.  I've seen some of those pictures a long time ago but i dont remember super well.  Anyways its just like X-ray. Its something that pierces your clothes but bounces back from the skin sonar style. So yeah its not a clear picture but a 3d model of the person. Still very good quality. You can see peenises, titties etc.  Wear iron armor beneath your clothes and noone will ever see you naked.",
+    "follow-up": "What kind of materials can terahertz waves penetrate?"
+  },
+  {
+    "id": 12127,
+    "question": "eli5 How do video downloaders work?",
+    "answer": "To show you the video your computer has to download it. A video downloader will see a video file being downloaded and save it to a more permanent folder. For non YouTube ones it might just grab any file it sees, which can lead to you downloading ads.",
+    "follow-up": "How do video downloaders analyze network traffic to capture video content?"
+  },
+  {
+    "id": 14943,
+    "question": "Eli5 How do players go pro into esports?",
+    "answer": "Do you mean how do they develop the skills to be professional or what defines them as professional? The answer to the former is discipline and practice. The answer to the later is that they are sponsored and between sponsorships and winnings from tournaments make some or all of their living wage by gaming competitively.",
+    "follow-up": "What are some key elements that mentorship might cover for aspiring professional esports players?"
+  },
+  {
+    "id": 6082,
+    "question": "ELI5: What is aerodynamics and does it play a part when skydiving?",
+    "answer": "Aero = air, dynamics = movement.  [Aerodynamics](https://en.wikipedia.org/wiki/Aerodynamics) is the study of how air movement affects objects, in other words, how different shapes of objects will fall or fly through air, and how air will move around these objects, and drag at them.  When you're skydiving, gravity pulls you down, and the air hits your body and pushes it.  You can move your arms and legs to turn, tumble, fall slightly faster or slower, etc.  If you're wearing a [wing suit](https://previews.123rf.com/images/victorkozlov/victorkozlov2001/victorkozlov200100902/138222924-djibouti-extreme-men-in-wing-suit-templet-skydiving-men-in-parashute-simulator-of-free-fall-.jpg) you can glide a little bit better (rather than just falling like a rock), and the way the air interacts with the wing surfaces of the suit is part of aerodynamics.",
+    "follow-up": "How do aerodynamic principles apply to the design and deployment of parachutes?"
+  },
+  {
+    "id": 16021,
+    "question": "Eli5: Why did Germany betray Russia in ww2?",
+    "answer": "Because they always planned to do so.  The entire plan of Hitler's was to invade the Soviet Union and conquer the heavily populated eastern parts.  He then planned to kill most of the population through starvation, move in Germans to all be farmers and have the surviving Soviet population be used as slave labour.  Germany needed to invade the USSR.  All that ECONOMIC MIRACLES of the 1930s was on huge amounts of debt.  The only thing that was going to pay for it was conquest.  The Germans plundered as much as they could from every country that they conquered to pay off their debtors.",
+    "follow-up": "What economic conditions in Germany during the 1930s led to the need for conquest?"
+  },
+  {
+    "id": 10429,
+    "question": "ELI5 How can there be a global water shortage if virtually all of our water is recycled naturally?",
+    "answer": "Because global warming is changing weather patterns around the world which means less rain and snow in places where it used to be. It's not that there's less water overall, it's just that changing weather patterns changes where the water is going, which is places were it's either not needed or inaccessible.   For example, less winter snow in the Rocky Mountains means less spring and summer water in the Colorado River watershed which provides water for much of The Southwestern U.S., eventually emptying in the Pacific. At the same time, Typhoons in the pacific are getting bigger and more frequent, so there's more water being dumped back into the ocean. In other words, water that used to fall as snow in the Rockies is now falling as rain in the Pacific Ocean where it's unusable. That's a simplistic explanation but you get the drift.",
+    "follow-up": "How does the increased frequency of extreme weather events affect water distribution?"
+  },
+  {
+    "id": 19848,
+    "question": "ELI5: How are credit/debit cards with chips more secure than others when most card readers have a \"Bypass PIN\" option that allows the transaction to go through without any additional verification? It seems to me that this is less secure than an old chipless card that at least requires a PIN.",
+    "answer": "The chip and/or the PIN are a means of verifying the transaction is legit.  On a card without the chip, the only data is its number, the expiration date, and maybe the verification code on the back. The magnetic stripe is usually just the card number. These kinds of terminals require the PIN because (hopefully) only the authorized cardholder knows that PIN. These cards are easy to duplicate so we NEED extra security measures.  Cards with a chip, on the other hand, are a lot harder to replicate. The chip is actually a tiny computer that does some math on some inputs and generates numbers in a way that isn't easy to guess even if you see it done for a few thousand inputs. The bank who issues the card knows the secret information that makes it possible to predict the numbers. So, oversimplified, when you use a chip reader, the terminal gives the chip some inputs, gets the chip's result, then sends the inputs and the results to the bank. The bank verifies that the inputs should produce that output on your chip. So in a way, the chip IS the PIN, but it's more secure than that because you can't accidentally give someone knowledge that makes them able to replicate your chip.  It's probably possible to copy a card with a chip, but it would take a high degree of sophistication and someone would have to physically steal your card to do it. You can't reproduce the chip from observing a single read, and in theory even seeing hundreds of thousands of input/output wouldn't be useful. Because it's incredibly close to impossible to duplicate these chips, when a terminal uses the chip as an ID you don't have to use a PIN. The assumption is it means someone would've had to have stolen your actual card and you'd probably notice that much more quickly than it takes to figure out someone's skimmed a traditional card.",
+    "follow-up": "How does the tamper-resistant technology in chip cards prevent unauthorized access or modifications?"
+  },
+  {
+    "id": 10118,
+    "question": "ELI5: how is the United States in debt?",
+    "answer": "The public\u00a0holds over $22 trillion of the national debt.1 Foreign governments hold a large portion of the public debt, while the rest is owned by U.S. banks and investors, the Federal Reserve, state and local governments, mutual funds, pensions funds, insurance companies, and savings bonds. China being the most popular foreign country to point out. Sure we could refuse to pay- but then why would someone loan us money next time we need help if we prove we won't pay it back? It would also make the savings bonds of millions of Americans worthless- which would collapse their retirement goals. Plus that would definitely hurt us in our efforts of international trade.",
+    "follow-up": "What are the expected benefits of using a credit-based economic model?"
+  },
+  {
+    "id": 9121,
+    "question": "[eli5] Can we heat pots and pans with direct electricity?",
+    "answer": "there used to be pots and pans that u plugged in and they would heat up and all that. idk if there still are. they were rather awkward to clean tbh.   maybe thats the crux of it. it would be reall quote difficult to clean it like a normal dish so its function is overshadowed by its use upkeep",
+    "follow-up": "What types of conductive materials are typically used in resistive heating elements?"
+  },
+  {
+    "id": 5536,
+    "question": "eli5 Can you make perpetual stew in a crock pot without getting sick?",
+    "answer": "There\u2019s been a few historical perpetual pots of food over the years. One in Bangkok I think was a few hundred years old. As long as they are kept at food safe temperatures and enough is being added and taken, it\u2019s possible.",
+    "follow-up": "Why are root vegetables and hardy greens recommended for a perpetual stew?"
+  },
+  {
+    "id": 28,
+    "question": "ELI5: Why aren\u2019t there insects the size of man or larger?",
+    "answer": "They don\u2019t breath the same way mammals do. They have tubes in various parts of their body that expose their circulatory system to air where it absorbs oxygen. Because they don\u2019t inhale, they air limited in size by the amount of oxygen in the atmosphere. Which is why they used to be bigger in past eras when there was more oxygen in the atmosphere.",
+    "follow-up": "How does gravity affect the biomechanics of larger insects differently than smaller ones?"
+  },
+  {
+    "id": 6502,
+    "question": "ELI5 how our brains notice when something has changed?",
+    "answer": "The brain runs a LOT of processes sub-consciously, that is, you are not even aware of them going unless some of them turn up something that the brain thinks should be brought to conscious attention. The brain has a mental picture of your room stored for reference, and when it sees something has changed, it will sound an alarm bringing this fact to consciousness, because it\u2019s pretty important for safety reasons, obviously.",
+    "follow-up": "How does the novelty detection system operate in the brain?"
+  },
+  {
+    "id": 19975,
+    "question": "ELI5: Why is deflation worse than inflation?",
+    "answer": "Why would I pay $1000 for a TV today when it will be cheaper tomorrow.   Obviously not that simple.  But if people don't spend money, shops go broke, people lose jobs etc",
+    "follow-up": "What are the mechanisms by which deflation can cause a credit crunch?"
+  },
+  {
+    "id": 19912,
+    "question": "ELI5: Considering that more calorie dense foods weigh less and have more calories while less calorie dense foods weigh more and have less calories, and the conservation of matter, how more calories means more weight?",
+    "answer": "Conservation of matter:  (weight of food) - (weight of poop) - (weight of pee) = weight gained by your body?    Actually, a bit more complicated, because you breathe in O2 and expel CO2 (so you lose carbons  from the \"weight of food\").  You also sweat out some of the water you just ingested.",
+    "follow-up": "How does the body metabolize fats, carbohydrates, and proteins for energy?"
+  },
+  {
+    "id": 21245,
+    "question": "eli5: why aren\u2019t animals massive? Elephants are huge, and they seem to be doing great, so why are other animals so small?",
+    "answer": "Here\u2019s the short short answer. Big animals need A LOT of energy. Like a ridiculous amount. An entire ecosystem of massive organisms. Just couldn\u2019t work.  Most would starve. But a massive ecosystem of tiny organisms is possible. They require a lot of energy done their body size, but not overall - and so we get lots of smaller species, that don\u2019t store much energy, like mice.",
+    "follow-up": "Why is it that evolutionary pressures generally favor smaller animals over larger ones?"
+  },
+  {
+    "id": 296,
+    "question": "ELI5: Why can't they make CPUs bigger if heat dissipation is a problem?",
+    "answer": "Say you increase the size by a factor of 2 in both dimensions. That would result in quadruple the distance between two components - and while electrons do travel with very high speeds (not quite light speed, but close, relatively speaking) with the amount of electrons being moved you'd have a much slower CPU in the end.  That's why the actual transistors are getting smaller and smaller - so you can pack them more densely and reduce the distance between them, to make faster CPUs.",
+    "follow-up": "In what ways are current semiconductor manufacturing techniques limited when it comes to making larger CPUs?"
+  },
+  {
+    "id": 19365,
+    "question": "ELI5: when someone shouts, why do people say that they have \"Thin walls\"? Even if they *are* thin, if there aren't any cracks or anything, sound cannot travel beyond them and will be trapped within them, right?? I dont understand if it has anything to do with thickness, I think it's about if there",
+    "answer": "Sound travels through solid objects, some much better than others.  Stand in a closed bank safe and scream your head off, no one outside is going to hear you.  Wrap yourself in tissue paper and talk normally and people will hear you the same as if you weren't wrapped up.  Apartment walls fall somewhere in between, with some being thick and solid with multiple layers of plaster and insulation that do a really good job absorbing (and dissipating) sound waves without transmitting them through the wall.  Others are hollow spaces with a thin sheet of drywall on either side, and these tend to do a really poor job of absorbing the sound waves.  These \"thin walls\" make it easier to hear what's happening on the other side.",
+    "follow-up": "What measures can be taken to improve the acoustic properties of thin walls?"
+  },
+  {
+    "id": 4543,
+    "question": "ELI5: Why (or how?) did mint become the \u2018gold standard\u2019 for oral health?",
+    "answer": "Toothpaste has tin in it, and tin has a bad metallic taste.  To overpower that, it takes a strong flavor, like mint or peppermint.  Other than cinnamon, there aren't many low cost flavors that will cover the tin taste.",
+    "follow-up": "Why is maintaining saliva production crucial for oral health?"
+  },
+  {
+    "id": 7824,
+    "question": "ELI5 What does it mean to say that \"electromagnetic radiation is a wavelength that is inversely proportional to its frequency\"?",
+    "answer": "In a nutshell, the higher the frequency, the shorter the wavelength.  Since frequency is a measurement of how many times an electromagnetic wave passes a fixed point per second, that means that shorter waves are going to pass more often, and therefore have a higher frequency.",
+    "follow-up": "What are some applications of high-frequency waves like gamma rays?"
+  },
+  {
+    "id": 11314,
+    "question": "ELI5: What are the questions scientists are trying to answer for the cure to cancer?",
+    "answer": "Curing cancer is like trying to develope a weapon that when fired into a crowd will only kill terrorists. Cancer cells are still your own cells and mostly behave like normal cells (in terms of what kills them). So the big question scientists have to find an answer too is: what differentiates cancer cells enough from healthy cells to kill them off without killing the rest of the body with them.",
+    "follow-up": "What role does bioinformatics play in predicting cancer behavior and tailoring personalized treatment plans?"
+  },
+  {
+    "id": 4574,
+    "question": "ELI5: How can our ears know if a sound is coming from up high or down low?",
+    "answer": "Our ears are an odd shape, so the sound bounces around differently, depending on where the sound is coming from.   When you're very young, your brain figures out that if a sound sounds a certain way, it's probably coming from a certain direction.",
+    "follow-up": "What is the significance of frequency spectrum analysis in vertical sound localization?"
+  },
+  {
+    "id": 13078,
+    "question": "ELI5: the anti-work movement. How does the world keep turning, so to speak, if work is abolished?",
+    "answer": "with universal basic income, people can still take a normal job as bonus money, or work on their passion projects, or be poor with basic needs met.",
+    "follow-up": "How would social welfare systems support voluntary and passion-driven contributions in society?"
+  },
+  {
+    "id": 5153,
+    "question": "ELI5: What is a dynamic volume?",
+    "answer": "It's when a partition on a physical drive (when your computer says C: or D:, for instance), can spread to one or more drive physical drive to fits its needs for size and speed. For instance, if your D: Drive is across an HDD and an SSD, you get a dynamic volume that can take advantage of both as needed, but is also dependent on the presence and survivability of both woth work.  However, it does not necessarily have to be on multiple physical drives, as it can increase its own size on the same drive as it needs to, automatically.   Basically, a dynamic drive is a drive that adjusts its specs to fit what it needs.",
+    "follow-up": "What is the significance of dynamic resizing in dynamic volumes?"
+  },
+  {
+    "id": 3193,
+    "question": "Eli5: How and why do the prices of stocks rise and fall?",
+    "answer": "Supply and demand.  Imagine there is 100 of a thing that people want, and 100 people want it. The supply and demand are equal so the price stays the same (equal amount of sales and buys)  Now if only 10 people want it, the price will drop (more selling than buying)  However if there's 1000 people trying to buy, the price will increase (more buying than selling)",
+    "follow-up": "Why might strong earnings lead to an increase in a stock's price?"
+  },
+  {
+    "id": 8836,
+    "question": "ELI5: How does night vision work?",
+    "answer": "Basically it uses small amounts of infrared light that is reflected off objects naturally, then it converts them using optoelectric image enhancement changing it from the invisible infared into the green light show that is placed right in front of you. The shitty thing about night vision is if you are moving with it your depth perception is shit. They have also have some newer types of night vision that use other digitial enhancment but I never played with those so idk how those work.",
+    "follow-up": "What advantages do digital enhancements like recording, zooming, and overlaying information provide in night vision devices?"
+  },
+  {
+    "id": 10660,
+    "question": "ELi5: Where do those files go after you click \"empty recycling bin\" on your computer? Do they just disappear into thin air?",
+    "answer": "The files don't actually go anywhere, what the computer does is it cuts off the directory path to the file. Think of it as covering up a road to a house, rather than demolishing the house itself. Then, later, when the computer ends up writing new information, it'll go over that space on the drive that the files occupied, in the previous example, destroying the old house to put up a new one. There are security programs you can have that will actually remove the file itself, overwriting the space with nothing rather than just removing the path.",
+    "follow-up": "What is logical deletion and how does it work?"
+  },
+  {
+    "id": 2905,
+    "question": "ELI5: why are there a huge amount of different insect varieties, like in ants, but only a small amount of different varieties in animals such as crocodiles?",
+    "answer": "Tiny changes in those small animals allow them to fulfill different niches and avoid competition.  A tiny change in a crocodiles morphology wouldn't do as much the separate it from the other croc species.    Ex.  A slight change in the size of a birds beak (I know I changed examples but still) will change its primary food source.  A small change in a crocs mouth.. will still make it be a top predator.",
+    "follow-up": "How does the reproductive rate of insects contribute to their high species diversity?"
+  },
+  {
+    "id": 24618,
+    "question": "Eli5:Why do we have the urge to constantly touch a bruise or a wound that hurts?",
+    "answer": "It\u2019s not so much the pain of a wound, but the brain\u2019s response to pain going away that makes you want to touch an injury.  When you touch a bruise or similar minor injury, it hurts for a moment. The pain subsiding causes the brain to release a stimulus of pleasure because the pain is subsiding. It\u2019s that release of pleasure that somewhat tempts you to touch it more.",
+    "follow-up": "Can you explain the self-soothing mechanism involved in touching a wound?"
+  },
+  {
+    "id": 23129,
+    "question": "ELI5 How exactly does repossessing vehicles/planes/etc work?",
+    "answer": "Former auto/boat repo person here. The reason you often have to do some sneaking is because the person who you are repo\u2019ing from obviously doesn\u2019t want you to take the vehicle, and will resist you taking it.   You do have the legal right to take the property, however you have limited power to use any force. So if the person sees you about to repo their car, and decides to jump into the car, you can not physically remove them. You also can not tow the car with them inside it. If you can block the car from leaving it\u2019s current location then you have every right to call the police, and they will gladly force the person to get out, and assist you with the repo. This sounds great but the downside is that you have to stay with the car until the police arrive. This could take an hour or more. All the while, you have to babysit the car and deal with the person/people trying to stop you.",
+    "follow-up": "What are some of the costs associated with the repossession process that recovered asset proceeds are used to cover?"
+  },
+  {
+    "id": 4754,
+    "question": "ELI5: Why is it so easy to take naps/doze off in the middle of the day, but so hard to fall asleep once it\u2019s actual bed time at night?",
+    "answer": "I study in this field of research actually, Chronobiology and Memory. Search up the circadian clock. Basically you are now adapted (entrained) to sleeping late and napping in the middle of the day, probably due to warmer temperatures, lack of energy or big meals. Light and temperature are both very prominent factors (zeitgeber) which help regulate your biological clock down to the molecular levels.  No phone, lights out and sleep at night. Then wake up early with fresh sunlight every morning for the next few days and you should be entrained back to the regular circadian rhythm !  Note: Can depend on your health and age and a lot of other factors.",
+    "follow-up": "In what ways do the body's circadian rhythms differ during the day and night in terms of sleep?"
+  },
+  {
+    "id": 2092,
+    "question": "ELI5: Why are red yellow and blue primary colors?",
+    "answer": "Because you can't mix any colours together to make red, yellow or blue.  Those three have to exist to create any other secondary colours.",
+    "follow-up": "How do secondary and tertiary colors differ?"
+  },
+  {
+    "id": 13658,
+    "question": "ElI5 How come we can eat pretty much all seafood raw but not land animals?",
+    "answer": "Mostly it\u2019s because things are prepared and stored so poorly. If I recall, most meat and stuff could be eaten raw until salmonella and e-coli became rampant. This isn\u2019t to say that you could leave raw meat out and eat it, no, but you could definitely eat meat from a fresh kill. Nowadays there\u2019s too much risk, especially from mass meat production.",
+    "follow-up": "What role does the salty nature of seawater play in limiting bacterial proliferation in seafood?"
+  },
+  {
+    "id": 4712,
+    "question": "eli5: Why do commonly used items, such as CRT's or old consoles skyrocket in value after they stop production? Assuming that these items stopped production today, why do sealed boxes or hell even good condition second-hand items almost double in price mere weeks after the end of production?",
+    "answer": "CRTs have some advantages over LCDs and other flat-panel display technologies that matter for certain niche applications. To the typical consumer, the advantages of flat panels outweigh these rather specific disadvantages, and also different flat panel technologies have complementary strengths so most people don't need a CRT. So once flat panels became cheap enough to be accessible to most consumers, CRT production took a nosedive. But the niche market for them remained, and so now you have a situation where the supply is almost 0 but there is still some demand for it. Of course, you could argue that supply could still track demand and so prices should be unaffected, but that's not the case because (1) with this big drop in production, economies of scale have been lost and so it's more expensive to manufacture a CRT monitor these days and (2) the demand is no longer from average consumers who want to pay low prices for medium-quality products, but rather it comes from specialists or enthusiasts who need CRTs with specific, high-quality specifications and are willing to pay more for that.  Of course, the second point does not explain why even older, second-hand CRTs have gone up in price. That's more due to point (1) combined with a somewhat separate (though overlapping) demand from enthusiasts and collectors who don't care so much about performance.  Anyway, in short: CRTs are an example of a product that has gotten more expensive because the mass market for it disappeared, and now it's turned into a niche market, where costs are higher and customers are willing to pay more.  Things like old consoles, where production has fully and permanently stopped, are a different situation, because there you're dealing with a somewhat steady (if small) demand combined with a steadily dwindling supply (that will eventually drop to 0). So e.g. if you really want to buy a NES today, your options are very limited as you're dependent on the ever-decreasing number of NES's in the world that still work, *and* that people are willing to sell. So even though very few people are looking to buy NES's, the supply is even smaller.  I'm not sure it's accurate to say that these consoles shoot up in price weeks after their production ends (that would surprise me but I'm happy to be corrected on that). By that point, presumably nearly everyone who wanted to buy one already did so, and people who couldn't previously afford one now are looking to buy one cheaper in the second-hand market that is ramping up. Also, often consoles that go out of production are superseded by newer models and the bulk of the demand will switch to them, while the collectors' market will take years to get off the ground. The only exception I can think of would be if the manufacturer (for some atypical reason) stopped producing the console before they had exhausted the (profitable) demand for it (and didn't release a new console yet).",
+    "follow-up": "How does the release of newer console models impact the demand for older, discontinued ones?"
+  },
+  {
+    "id": 8081,
+    "question": "ELI5: Why is Hotel California the highest quality lossless audio of all time?",
+    "answer": "I think your premise is wrong. There isn\u2019t a \u201chighest quality lossless\u201d in audio. There are several tiers of quality in digital audio, of which there are millions of tracks on each level.  Typical PCM samplerates are 44.1kHz, 48k, 88.2k, 96k, 192k, and 384k, by 16, 24, and 32 bits.  For DSD audio it\u2019s DSD256, 512, 1024.  Hotel California was recorded, I believe, on 2-inch tape, which by the 70s was pretty clean, but by no means without coloration or noise. Again, millions of songs were recorded to tape, none of which are higher or lower quality than the other.",
+    "follow-up": "In what ways does the attention to detail in the mixing and mastering process influence the final audio quality of a recording?"
+  },
+  {
+    "id": 16507,
+    "question": "Eli5: Why is data so valuable to companies?",
+    "answer": "Because the more data that can be collected about you, the more \"they\" know about you; who you are, your age, what you like, where you go, when you get paid and most importantly, what keeps you looking at a screen.  Why do they want you to look at a screen? You may ask.  Advertising.  Companies want to make money, and in order to do this they need to let people know about their products. But advertising your products costs a lot of money when you are trying to reach a wider audience.  So they target specific demographics.  Where before, they would've advertised on a certain website, or in a certain area, advertisers can now target specific people. People they know like the kind of things they are selling. People of a particular age and gender who like to purchase products similar to yours.  By targeting more specifically, they have more chance of making a sale per dollar spent on advertising. So companies who harvest data from us sell it to 3rd party advertisers. And with the amount of people putting their entire lives online, and the amount of money that can be made from selling stuff to them, means it's a big money business.  Then there's the illegal side of the industry.  Your private data, such as passwords and credit card details, the kind of stuff that is kept hidden (or encrypted) online, is very valuable to cyber criminals who can buy such data on the dark web. They may want phone numbers or email addresses to try and scam through phishing emails etc. Or buy credit card details to commit fraud. They can also purchase malicious software (malware) to try and steal data from companies who don't have a robust enough security system.",
+    "follow-up": "What are some examples of tailored products or services developed through data analysis?"
+  },
+  {
+    "id": 12843,
+    "question": "ELI5: How does the pioneer plague tell alien civilizations where we are?",
+    "answer": "So, this works on roughly the same principle as the GPS receiver built into your phone.  If I give you a map and tell you that I'm fifteen miles away from this particular point, then you can map out a thirty-mile-wide circle where I can be anywhere along the circumference.  If I give you another point and say that I'm a certain distance away from *that* point as well, you can narrow down where I could be based on the intersection of the two circles.  A third point/distance pair is sufficient to get a single approximate location, and further pairs refine the location further, as well as providing redundancy in case of signal loss.  This is, broadly speaking, the purpose of the pulsar map on the Pioneer plaque (and the Voyager record, as well): fourteen mapped pulsars, with distances and frequencies attached, would give a sufficiently-advanced alien species all the information they would need to locate our solar system in space.",
+    "follow-up": "How does the hyperfine transition frequency of neutral hydrogen aid in interpreting other data on the plaque?"
+  },
+  {
+    "id": 1460,
+    "question": "ELI5 : How do stocks work ?",
+    "answer": "You'd almost definitely need more money than you have to make a stock move in any sustained manner. Sure, if a stock trades $1m worth of shares on an average day and you buy $10m in a day it'll cause price to rise, but if demand isn't sustained then it'll fall right back down. Also, if you did that specifically to pump up price and then sell, that's fraud.",
+    "follow-up": "What factors contribute to the rise and fall of stock prices?"
+  },
+  {
+    "id": 25372,
+    "question": "ELI5: How can both nuclear fusion and nuclear fission create energy? Shouldn't one of this action create and another consume energy according to thermodynamics laws?",
+    "answer": "To my understanding, only fission of very large nuclei, and fusion of very small nuclei, are exothermic.     Trying to fuse very large nuclei will result in a net consumption of energy.",
+    "follow-up": "What is the binding energy per nucleon and why is it significant in nuclear reactions?"
+  },
+  {
+    "id": 24508,
+    "question": "ELI5 Why is stock manipulation illegal?",
+    "answer": "Freedom of speech does have certain limitations in particular inciting violence or threat. Its illegal to threaten to kill someone but remember that its that call to arms that's illegal. The words \"I'm going to kill you\" is not illegal because you can say it sarcastically, as a quote, or as an example as I just did. However, if you say \"I'm going to kill you\" then include a date, time, how you plan on doing it, etc then it becomes illegal.  Similarly, the argument for freedom of speech cannot be used to defend illegal market manipulation, fraud, insider trading, etc. It is the action that is illegal not the words. Market manipulation is illegal because only a few can benefit from it. In your example Warren Buffet says \"you should buy company X's stock\" so a bunch of people buy it and increase the stock value and then Warren could pull all of his money out and make a ton of money but plummeting the stock price. That would effectively be stealing from the company and the people he told to buy the stock.  Pump and dump like that is very different than typical stock increases because it is not based on an intrinsic value. It is only increasing in value due to a perceived demand based on stock sales but has no relevance to the performance of the company. And while the process of buy low sell high in a short term is not illegal it brings a lot more risk to the table and not really considered \"investing\" but more betting/gambling on the stock market.",
+    "follow-up": "How does stock manipulation deter participation from honest investors?"
+  },
+  {
+    "id": 11793,
+    "question": "ELI5: Why are mass shooters/mass murderers overwhelmingly young white men, but regular murderers and serial killers are more demographically diverse?",
+    "answer": "Murder isn't a single thing.  There are lots of different situations that end up murdering people, and different individuals are drawn to different situations.  There's likely no \"reason\" for this, that we will ever understand, just like there is often not a \"reason\" that some individual is affected by mental illness.  Correlation is not causation.  Sure, it's possible that liberal school systems are systematically racist against against white males as part of some agenda, but those sorts of implicit biases are very hard to accurately understand or do anything about.  It's more likely to be a coincidence.",
+    "follow-up": "What types of psychological disorders are common among regular murderers and serial killers?"
+  },
+  {
+    "id": 18074,
+    "question": "eli5 If an item is on allocation, but they ramp production, how does availability decrease?",
+    "answer": "In the most general terms, a product goes into allocation when supply is unable to meet demand. The two basic reasons for this are a) supply has been disrupted and is lower than usual, or b) demand is higher than anticipated.   It might not be that the manufacturer is producing at the same rate, especially after the pandemic. Raw material supply might be disrupted, factories may have been run slower than normal, producers may not have anticipated more demand etc etc. Most factories cannot simply increase output - it could take weeks or months.",
+    "follow-up": "In what ways might raw material supply disruptions impact production levels?"
+  },
+  {
+    "id": 17684,
+    "question": "ELI5: confused on how a 25 year sentence is considered life?",
+    "answer": "You will serve 25 years with zero possibility of parole. You will then be eligible for parole, but you\u2019re not guaranteed to ever get out.",
+    "follow-up": "What are legal provisions that blend the concept of life sentences and long-term fixed sentences?"
+  },
+  {
+    "id": 3293,
+    "question": "ELI5: Why does Gasoline go bad after sitting for awhile? Is it still usable at all? What happens if you use it anyway will your machine just not run?",
+    "answer": "In addition to what others have said, it depends a lot on the engine. Automobile engines are much better at burning old gas than 2-cycle engines (such as weedeaters). 8 month old gas will usually run just fine, even in a lawnmower, but for a smaller engine you'll want as fresh gas as possible.",
+    "follow-up": "What are the potential consequences of using old gasoline in an engine?"
+  },
+  {
+    "id": 3697,
+    "question": "Eli5 why our solar system is so flat? Why are the orbits not more of a sphere than a disk?",
+    "answer": "You know how some (showy) pizzerias will stretch out pizza dough by throwing it up into to air? Well, more specifically, what's doing the stretching is the spin they put on the dough, which pulls the outer edges away from the center, while the top and bottom aren't pulled, turning the dough into a flat disc.  The same kind of thing happened in our solar system. Back when it was just a cloud of dust, it started spinning, and the top and bottom fell in toward the center while the sides stretched out. Eventually planets formed out of the dust, but they kept going in the same motion, \"spinning\" (now orbiting) around the center (the sun) in a flat disc.",
+    "follow-up": "How do gravitational interactions among particles within the early solar nebula contribute to the flatness of the solar system?"
+  },
+  {
+    "id": 19758,
+    "question": "ELI5: Is going to sleep at different times bad for you?",
+    "answer": "Sleep is probably one of the most underrated health concepts. Not having a set sleep schedule causes a deficit of sleep by messing with the circadian rhythm. Shift work and  losing sleep in general is one of the most deadly things you can do to your body. Shift workers generally don\u2019t live long, have substandard fitness, and increase the probability of cancer and chronic disease.  Edit: I\u2019m a shift worker. I\u2019ve aged \u2018at least\u2019 20 years in just the last 10.  Of all my coworkers who\u2019ve retired, only 1 has lived passed 70. Some coworkers didn\u2019t make it passed 45.",
+    "follow-up": "How can desynchronized biological clocks affect daily activities and societal expectations?"
+  }
+]
