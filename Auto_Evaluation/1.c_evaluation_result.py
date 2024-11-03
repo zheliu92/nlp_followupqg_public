@@ -1,104 +1,60 @@
 import json
-from typing import List
-from pydantic import parse_obj_as, BaseModel, Field
+import seaborn as sns
 import matplotlib.pyplot as plt
+import pandas as pd
 import os
 
-# class Result(BaseModel):
-#     id: int = Field(..., example="123456")
-#     # follow_up: str = Field(..., example="123456")
-#     bert: float = Field(..., example="123456")
-#     nlp_similarity: float = Field(..., example="123456")
-#     bleu: float = Field(..., example="123456")
-#     bleu1: float = Field(..., example="123456")
-#     bleu2: float = Field(..., example="123456")
-#     bleu3: float = Field(..., example="123456")
-#     bleu4: float = Field(..., example="123456")
-#     rouge: float = Field(..., example="123456")
-#     meteor: float = Field(..., example="123456")
-
-models = ['full', 'gpt','org','small']
-modes = ['topkp'] # 'beam'
-
-# print(os.listdir())
+models = ['full', 'gpt', 'org']
+data = []  # Collect data for the combined grouped histogram
 
 for model in models:
-    for mode in modes:
-        f = open("result.txt", "a")
+    current_filename = f"Auto_Evaluation/{model}_clustered_evaluation.json"
+    
+    with open(current_filename, 'r') as json_file:
+        json_data = json.load(json_file)
         
-        current_filename = f"Auto_Evaluation/{model}_evaluation_repeat_{mode}.json"
+        max_score = {}
+        scores = {metric: [] for metric in [
+            'bert', 'nlp_similarity', 'bleu', 'bleu1', 'bleu2', 'bleu3', 'bleu4', 'rouge', 'meteor'
+        ]}
 
-        # Open the JSON file and load its contents
-        with open(current_filename, 'r') as json_file:
-            json_data = json.load(json_file)
+        # Calculate max scores per case and store in scores dictionary
+        for case in json_data:
+            max_score = {metric: case[0][metric] for metric in scores}
+            
+            for task in case[1:]:
+                for metric in scores:
+                    max_score[metric] = max(max_score[metric], task[metric])
+                    
+            for metric, value in max_score.items():
+                scores[metric].append(value)
+                data.append({'Model': model, 'Metric': metric, 'Score': value})  # Add for combined figure
 
-            max_score = {}
+    # Plot each model's metrics as a separate bar plot with Seaborn
+    plt.figure(figsize=(10, 6))
+    sns.set(style="whitegrid")
+    sns.barplot(data=pd.DataFrame(
+        [{'Metric': k, 'Score': v} for k, values in scores.items() for v in values]),
+        x='Metric', y='Score', ci='sd', palette='pastel'
+    )
+    plt.xticks(rotation=25)
+    plt.ylim(0.0, 1.0)
+    plt.title(f'{model.capitalize()} Model - Scores by Metric')
+    plt.tight_layout()
+    plt.savefig(f'Auto_Evaluation/{model}_scores_enhanced.png')
+    plt.close()  # Close figure to avoid overlap in loops
 
-            scores = {
-                'bert': [],
-                'nlp_similarity': [],
-                'bleu': [],
-                'bleu1': [],
-                'bleu2': [],
-                'bleu3': [],
-                'bleu4': [],
-                'rouge': [],
-                'meteor': []
-            }
+# Create DataFrame for combined plot
+df = pd.DataFrame(data)
 
-            for case in json_data:
-                if max_score:
-                    scores['bert'].append(max_score['bert'])
-                    scores['nlp_similarity'].append(max_score['nlp_similarity'])
-                    scores['bleu'].append(max_score['bleu'])
-                    scores['bleu1'].append(max_score['bleu1'])
-                    scores['bleu2'].append(max_score['bleu2'])
-                    scores['bleu3'].append(max_score['bleu3'])
-                    scores['bleu4'].append(max_score['bleu4'])
-                    scores['rouge'].append(max_score['rouge'])
-                    scores['meteor'].append(max_score['meteor'])
-
-                max_score['bert'] = case[0]['bert']
-                max_score['nlp_similarity'] = case[0]['nlp_similarity']
-                max_score['bleu'] = case[0]['bleu']
-                max_score['bleu1'] = case[0]['bleu1']
-                max_score['bleu2'] = case[0]['bleu2']
-                max_score['bleu3'] = case[0]['bleu3']
-                max_score['bleu4'] = case[0]['bleu4']
-                max_score['rouge'] = case[0]['rouge']
-                max_score['meteor'] = case[0]['meteor']
-                
-                for task in case[1:]:
-                    max_score['bert'] = max(max_score['bert'], task['bert'])
-                    max_score['nlp_similarity'] = max(max_score['nlp_similarity'], task['nlp_similarity'])
-                    max_score['bleu'] = max(max_score['bleu'], task['bleu'])
-                    max_score['bleu1'] = max(max_score['bleu1'], task['bleu1'])
-                    max_score['bleu2'] = max(max_score['bleu2'], task['bleu2'])
-                    max_score['bleu3'] = max(max_score['bleu3'], task['bleu3'])
-                    max_score['bleu4'] = max(max_score['bleu4'], task['bleu4'])
-                    max_score['rouge'] = max(max_score['rouge'], task['rouge'])
-                    max_score['meteor'] = max(max_score['meteor'], task['meteor'])
-              
-                scores['bert'].append(max_score['bert'])
-                scores['nlp_similarity'].append(max_score['nlp_similarity'])
-                scores['bleu'].append(max_score['bleu'])
-                scores['bleu1'].append(max_score['bleu1'])
-                scores['bleu2'].append(max_score['bleu2'])
-                scores['bleu3'].append(max_score['bleu3'])
-                scores['bleu4'].append(max_score['bleu4'])
-                scores['rouge'].append(max_score['rouge'])
-                scores['meteor'].append(max_score['meteor'])
-            plt.clf()
-            fig, ax = plt.subplots()
-            ax.boxplot(scores.values())
-            ax.set_xticklabels(scores.keys())
-            # rotate x-axis labels
-            plt.xticks(rotation=25)
-            ax.set_title(f'Bart - Scores by metric_{model}_{mode}')
-            plt.savefig(f'Auto_Evaluation/{model}_scores_{mode}.png')
-
-            f.write(f'Auto_Evaluation: {model}_scores_{mode} \n')
-            for key, value in scores.items():
-                # print(f'{key}: {sum(value) / len(value)}')       
-                f.write(f'{key}: {"%.4f" % (sum(value) / len(value))} \n')
-        f.close()
+# Combined grouped bar plot using Seaborn for consistency
+plt.figure(figsize=(12, 8))
+sns.set(style="whitegrid")
+sns.barplot(data=df, x='Metric', y='Score', hue='Model', ci='sd', palette='pastel')
+plt.xticks(rotation=25)
+plt.ylim(0.0, 1.0)
+plt.title('Model Performance Comparison by Metric')
+plt.legend(title='Model')
+plt.tight_layout()
+plt.savefig('Auto_Evaluation/all_models_comparison_enhanced.png')
+plt.show()
