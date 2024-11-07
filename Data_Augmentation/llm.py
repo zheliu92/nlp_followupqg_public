@@ -13,9 +13,9 @@ def llm_response(instruction, prompt, is_claude=False):
 def azure_response(instruction, prompt):
     try:
         azure_client = AzureOpenAI(
-            azure_endpoint='', # copy the endpoint from the azure portal
-            api_key='', # copy the key from the azure portal
-            api_version=""
+            azure_endpoint='https://ubcnlpgpt4.openai.azure.com/', # copy the endpoint from the azure portal
+            api_key='5d830dce7597439091699136c45c675d', # copy the key from the azure portal
+            api_version="2024-02-15-preview"
         )
 
         response = azure_client.chat.completions.create(
