@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FollowupQG Data Annotation Task</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            height: 140%;
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            gap: 20px;
+        }
+
+        .section {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+
+        .sub-section {
+            background-color: #e8f4fd;
+            border: 1px solid #a0c4ff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .sub-section h2 {
+            margin-bottom: 15px;
+            color: #00509e;
+        }
+
+        .sub-section p {
+            margin-bottom: 10px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .sub-section ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        .sub-section ul li {
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .sub-section-examples {
+            background-color: #ffffff;
+            border: 1px solid #a0c4ff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .instructions {
+            text-align: center;
+        }
+
+        .examples {
+            background-color: #dcedfa;
+            border: 1px solid #a0c4ff;
+        }
+
+        .character-input-container {
+            flex: 1;
+        }
+
+        .crowd-form {
+            flex: 1.5;
+        }
+
+        .story-container {
+            flex: 1.2;
+        }
+
+        .example-story-container {
+            flex: 0.5;
+        }
+
+        .example-button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            /* Space between buttons */
+            padding: 10px;
+        }
+
+        .example-buttons {
+            background-color: #4CAF50;
+            /* Green background */
+            color: white;
+            /* White text */
+            padding: 15px 32px;
+            /* Larger padding for better click area */
+            font-size: 16px;
+            /* Larger text */
+            border: none;
+            /* Remove default border */
+            border-radius: 8px;
+            /* Rounded corners */
+            cursor: pointer;
+            /* Show pointer cursor on hover */
+            transition: background-color 0.3s;
+            /* Smooth transition on hover */
+        }
+
+        .example-buttons:hover {
+            background-color: #45a049;
+        }
+
+        .example-buttons.selected {
+            background-color: #FF9800;
+            /* Orange color for selected buttons */
+            color: white;
+            /* Keep the text white */
+            transform: scale(1.05);
+            /* Slightly enlarge the selected button for emphasis */
+        }
+
+        .section h2,
+        .section h3 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .existing-characters {
+            margin-bottom: 20px;
+        }
+
+        .existing-characters label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            cursor: pointer;
+            color: #555;
+        }
+
+        .existing-characters input[type="checkbox"] {
+            margin-right: 10px;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .question-block {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .question-block h4 {
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .ratings-section {
+            margin-top: 15px;
+        }
+
+        .ratings-section h5 {
+            margin-bottom: 10px;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .ratings-section .rating-group {
+            margin-bottom: 15px;
+        }
+
+        .ratings-section label {
+            margin-right: 15px;
+            color: #555;
+            cursor: pointer;
+        }
+
+        .ratings-section input[type="radio"] {
+            margin-right: 5px;
+            cursor: pointer;
+        }
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .navigation-buttons button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 12px 24px;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navigation-buttons button:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+        }
+
+        .navigation-buttons button:active {
+            background-color: #3e8e41;
+            transform: translateY(0);
+        }
+
+        .navigation-buttons button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+
+        .story-container h3 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .story-container p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        .story-container .highlighted {
+            background-color: #fff9c4;
+            padding: 5px;
+            border-radius: 4px;
+        }
+
+        .full-body {
+            display: flex;
+            flex-direction: column;
+            padding-left: 10vw;
+            padding-right: 10vw;
+        }
+
+        .progress-container {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 25px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            height: 20px;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background-color: #4CAF50;
+            transition: width 0.3s ease;
+        }
+
+        .validation-message {
+            color: red;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 1200px) {
+            .container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .section {
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="full-body">
+        <div class="section">
+            <div class="sub-section">
+                <div class="instructions">
+                    <h2>Instructions</h2>
+                    <h3>Job Description</h3>
+                    <p>The aim of this data annotation task is to select high-quality (Knowledge Goal Question, answer,
+                        follow-up question) tuples from online forums. The raw data was collected from the Reddit forum
+                        <strong>“explainlikeimfive”</strong>, which aims to provide simple, layperson-friendly
+                        explanations for real-life questions.
+                    </p>
+                    <p>We gathered (question, answer) pairs from this forum, along with replies to those answers. Often,
+                        these replies include follow-up questions. For this task, we selected follow-up questions and
+                        formatted each data entry as a triple of (initial question, answer, follow-up question). </p>
+                    <br>
+                    <p>Our data contains some noise, such as invalid follow-up questions, sensitive information, or
+                        questions unrelated to the original question or answer. Your role is to help us identify and
+                        remove these noisy samples.</p>
+                    <p>For each HIT, you will be shown one triple (question, answer, follow-up question). Carefully
+                        review each component and answer the following questions based on your judgment:</p>
+                    <div style="background-color: #d8ebf5; padding: 15px; border-radius: 8px; margin-top: 15px; margin-left: 100px; margin-right: 100px">
+                        <h4>Questions:</h4>
+                        <ol style="text-align: left; display: inline-block; margin: 0; padding-left: 20px;">
+                            <li><strong>Q1:</strong> Do you think the follow-up question is a valid question?<br>
+                                <br><strong>A:</strong> Yes <strong>B:</strong> No
+                            </li>
+                            <br>
+                            <li><strong>Q2:</strong> Do you think the (initial question, answer, follow-up question)
+                                contains sensitive information?<br>
+                                <br><strong>A:</strong> Yes <strong>B:</strong> No
+                            </li>
+                            <br>
+                            <li><strong>Q3:</strong> Do you think the follow-up question is related to the original
+                                question and the answer?<br>
+                                <br><strong>A:</strong> Strongly Related <strong>B:</strong> Related <strong>C:</strong> Slightly Related <strong>D:</strong> Not Related
+                            </li>
+                        </ol>
+                    </div>
+                    <br>
+                    <h4 style="color: red;">After answering all questions for a single task, click next to move to the next sample. <br>Once you complete all tasks, press submit to complete the survey.</h4>
+                    <br>
+                </div>
+                <div class="examples">
+                    <div style="display: flex; width: 100%;">
+                        <div class="example-button-container"
+                            style="width: 30%; border: 1px solid #a0c4ff; padding: 20px;">
+                            <h4 style="text-align: center;">Follow-up Question That Are...</h4>
+                            <hr>
+                            <button class="example-buttons" onclick="changeContent('valid_example', this)">Valid
+                            </button>
+                            <button class="example-buttons"
+                                onclick="changeContent('invalid_example', this)">Invalid</button>
+                            <button class="example-buttons"
+                                onclick="changeContent('inappropriate_example', this)">Inappropriate</button>
+                            <hr>
+                            <button class="example-buttons"
+                                onclick="changeContent('strongly_related_example', this)">Strongly Related to
+                                the
+                                Original Question</button>
+                            <button class="example-buttons" onclick="changeContent('related_example', this)">Related to
+                                the
+                                Original
+                                Question</button>
+                            <button class="example-buttons"
+                                onclick="changeContent('slightly_related_example', this)">Slightly Related to
+                                the
+                                Original Question</button>
+                            <button class="example-buttons" onclick="changeContent('not_related_example', this)">Not
+                                Related to the
+                                Original Question</button>
+                        </div>
+                        <div id="right-section" style="width: 70%; border: 1px solid #a0c4ff; padding: 20px;">
+                            <h2 style="text-align: center;">Select from one of the options on the left to view its
+                                example</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+
+            <div class="section">
+                <div class="container">
+                    <div class="section story-container">
+                        <h2 style="text-align:center">Data to Annotate</h2>
+                        <div id="data_container">
+                        </div>
+                    </div>
+                    <crowd-form class="section crowd-form">
+                        <div class="form-container">
+                            <h2 style="text-align:center">Data Annotation Questions</h2>
+                            <div id="annotation-questions-container">
+                            </div>
+                        </div>
+
+                        <div class="navigation-buttons">
+                            <!--<button id="prev-btn" type="button" disabled>Previous</button>-->
+                            <button id="next-btn" type="button">Next</button>
+                        </div>
+                        <crowd-button id="crowd-button" form-action="submit" disabled=true
+                            style="background-color: green;">
+                            Submit
+                        </crowd-button>
+                    </crowd-form>
+                </div>
+            </div>
+
+            <div class="validation-message" id="validation-message" style="display: none;">
+                Please select at least one character and complete all associated questions to proceed.
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+
+        <script>
+            const examples = {
+                invalid_example: `
+                    <div style="text-align: center;">
+                        <h3>Valid/Invalid Question Guideline</h3>
+                        <h4>Our Question: </h4><p>Do you think the follow-up question is a valid
+                        question?</p>
+                        <h4>Your Options:</h4> <p>A. Yes B. No</p>
+                        <p>Guideline: The follow-up question might contain
+                        multiple sentences but it should consist of at least
+                        one valid question. A valid question must be in
+                        question format and ask meaningful information,
+                        including Wh-questions (what/why/where/etc.),
+                        open-ended questions, probing questions and etc.
+                        Examples for invalid questions: “10000 meters?
+                        really?”, which are often used in conversational
+                        speech to express feelings instead of asking new
+                        information.</p>
+                    </div>
+
+                    <hr>
+                    <br>
+
+                    <h3 style="text-align: center;">Invalid Follow-up Questions Example #1</h3>
+                    <h4><b>Initial Question:</b></h4>
+                    <p>Why do seahorses still existed?</p>
+                    <h4><b>Initial Answer:</b></h4>
+                    <p>That’s not how evolution works. Evolution is survival of the fittest, not survival of the most useful. Seahorses will keep existing as long as they have food and reproduce faster than they are hunted.</p>
+                    <h4><b>Follow-up Question:</b></h4>
+                    <p>Ohhh, I can’t believe it. Seahorses will keep existing, really?</p>
+
+                    <h4><b>Reason For Being Invalid</b></h4>
+                    <p>Reason: “Seahorses will keep existing, really?" is in question format but is invalid, because it is not asking information but just expressing suspicious feeling.</p>
+
+                    <hr>
+                    <br>
+
+                    <h3 style="text-align: center;">Invalid Follow-up Questions Example #2</h3>
+                    <h4><b>Initial Question:</b></h4>
+                    <p>Why do tapes have screen tearing and splitting, but modern media doesn’t?</p>
+                    <h4><b>Initial Answer:</b></h4>
+                    <p>Information on a VHS was an analog signal. To fit all of it on a tape in a linear form would end up with miles of tape. So they record the information in diagonal stripes across the tape, which is much wider than it would need to be if it just held a single track. This is then played back through a spinning head that is placed at the same angle relative to the tape as the information on it. The tape moves by the head as the head spins, reading each stripe in a fluid motion, creating the smooth video you see on playback. Pausing it stops the tape moving, but not the spinning head. So the image you see is whatever that spinning head is reading, repeated over and over. Hence the "between frames" effect.</p>
+                    <h4><b>Follow-up Question:</b></h4>
+                    <p>That’s right, I remember watching a Technology Connections video about how the head itself had to be skewed because of that. I remember as a kid looking inside the VCR and wondering “what is that thing, is it broken?” Now I know.</p>
+
+                    <h4><b>Reason For Being Invalid</b></h4>
+                    <p>Reason: “what is that thing, is it broken?" is just the questioner’s memory, not a question asking information in the original question or the answer.</p>
+                `,
+                valid_example: `
+                    <div style="text-align: center;">
+                        <h3>Valid/Invalid Question Guideline</h3>
+                        <h4>Our Question: </h4><p>Do you think the follow-up question is a valid
+                        question?</p>
+                        <h4>Your Options:</h4> <p>A. Yes B. No</p>
+                        <p>Guideline: The follow-up question might contain
+                        multiple sentences but it should consist of at least
+                        one valid question. A valid question must be in
+                        question format and ask meaningful information,
+                        including Wh-questions (what/why/where/etc.),
+                        open-ended questions, probing questions and etc.
+                        Examples for invalid questions: “10000 meters?
+                        really?”, which are often used in conversational
+                        speech to express feelings instead of asking new
+                        information.</p>
+                    </div>
+                    
+                    <hr>
+                    <br>
+
+                    <h3 style="text-align: center;">Valid Follow-up Questions Example #1</h3>
+                    <h4><b>Initial Question:</b></h4>
+                    <p>ELI5: Why is the sea calm in the mornings?</p>
+                    <h4><b>Initial Answer:</b></h4>
+                    <p>There are two types of waves which can turn a flat sea into a rougher one - swell waves and wind waves. Swell waves can arrive at any time of day, but because wind waves are generated by the wind, they only develop when the wind begins to blow steadily. Since wind speeds are often low at night, and increase during the daytime, wind waves often die out during the night, leading to a relatively flat sea (perhaps with swell waves) in the early morning. During the day, the wind waves increase in size as the wind speed increases, leading to a rougher, more choppy, sea surface during the afternoon and evening.</p>
+                    <h4><b>Follow-up Question:</b></h4>
+                    <p>Now it’s time for my question. Why are winds always weak in the morning and very strong during the day?</p>
+
+                    <h4><b>Reason For Being Valid</b></h4>
+                    <p>Reason: The follow-up question is a “Why” question, asking specific reasons about the change of the winds during the day. Therefore, it is a valid question.</p>
+                `,
+                inappropriate_example: `
+                    <div style="text-align: center;">
+                        <h3>Inappropriate Question Guideline</h3>
+                        <h4>Our Question:</h4>
+                        <p>Do you think the (initial question, answer, follow-up question) contains racism, hate speech, sexual topics, offensive, or rude comments?</p>
+                        <h4>Your Options:</h4> 
+                        <p>A. Yes B. No</p>
+                        <p>Guideline: Examples of racist comments include: “It’s credit to your race,” “Black people will not understand.” Examples of hate speech include: “He should go back to where he comes from,” “All Mexicans are rapists.” Examples of offensive or rude comments include: “Women are not suitable for working in the IT field,” “Gay will never understand.”</p>
+                    </div>
+                    <hr>
+                    <br>
+
+                    <h3 style="text-align: center;">Inappropriate Follow-up Questions Example #1</h3>
+                    <h4><b>Initial Question:</b></h4>
+                    <p>ELI5: Do Asexual people not feel orgasms or pleasure?</p>
+
+                    <h4><b>Initial Answer:</b></h4>
+                    <p>Asexual people don’t feel sexual attraction. That is, the thing that makes a sexual person look at someone else and think "I want to have sex with that person". Asexual people can still feel sexual desire or sexual arousal, but it usually won’t be targeted towards someone in particular. I had an asexual roommate, and she did feel sexual arousal, but didn’t feel sexual attraction. So, in the rare time that she masturbated, she would be able to become aroused by porn or sexual material, but her arousal wasn’t centered in imagining herself performing the actions or having those actions performed on her.</p>
+
+                    <h4><b>Follow-up Question:</b></h4>
+                    <p>Is it like, how? Do their brains work in a way that disallows them of sexual thinking? I don’t mean anything bad, believe me, but I can’t understand how something as primal and ingrained in our genes as reproducing is nullified by a factor of personality.</p>
+
+                    <h4><b>Reason For Being Inappropriate:</b></h4>
+                    <p>Reason: Sexual topic is involved in this data entry, which can be considered as sensitive data.</p>
+                `,
+                strongly_related_example: `
+                    <div style="text-align: center;">
+                        <h3>Relatedness of Follow-Up Question</h3>
+                        <h4>Our Question:</h4>
+                        <p>Do you think the follow-up question is related to the initial question or the answer?</p>
+                        <h4>Your Options:</h4>
+                        <p>A. Strongly Related B. Related C. Slightly Related D. Not Related</p>
+                        <p>Guideline: 
+                        <ul>
+                            <li><strong>Strongly Related</strong>: The follow-up question asks for specific definitions, particular reasons, or meanings directly from the original question and answer. The information requested is fully contained in the original question or answer.</li>
+                            <li><strong>Related</strong>: The follow-up question primarily seeks information from the original question or answer but also brings in additional, new information.</li>
+                            <li><strong>Slightly Related</strong>: The follow-up question mainly addresses other cases but has some relevance to the original question or answer.</li>
+                            <li><strong>Not Related</strong>: The follow-up question does not relate to the original question or answer.</li>
+                        </ul>
+                        </p>
+                    </div>
+                    <hr>
+                    <br>
+
+                    <h3 style="text-align: center;">Strongly Related Follow-up Questions Example #1</h3>
+                    <h4><b>Initial Question:</b></h4>
+                    <p>ELI5: How is 2FA security by-passed?</p>
+
+                    <h4><b>Initial Answer:</b></h4>
+                    <p>Various possible methods. If someone inadvertently shared their 2fa setup key (or a situation like having their phone stolen and the authentication app backed up), that could be used alongside the original password to gain access. SIM swapping is another possible tactic assuming the first password and the victim's cell phone number are already known: if the attacker calls the carrier and requests a replacement SIM/ESIM delivered to the attacker, the attacker could then take advantage of any voice/text message 2fa prompts.</p>
+
+                    <h4><b>Follow-up Question:</b></h4>
+                    <p>And can anything be done to prevent a SIM swap?</p>
+
+                    <h4><b>Reason For Being Strongly Related:</b></h4>
+                    <p>Reason: The follow-up question is asking for elaboration on the solutions about how to prevent a SIM swap, and “SIM swap” appears in the answer. In addition, there is no other new information in the follow-up, and thus it can be considered as strongly related.</p>
+                `,
+                related_example: `
+                    <div style="text-align: center;">
+                        <h3>Relatedness of Follow-Up Question</h3>
+                        <h4>Our Question:</h4>
+                        <p>Do you think the follow-up question is related to the initial question or the answer?</p>
+                        <h4>Your Options:</h4>
+                        <p>A. Strongly Related B. Related C. Slightly Related D. Not Related</p>
+                        <p>Guideline: 
+                        <ul>
+                            <li><strong>Strongly Related</strong>: The follow-up question asks for specific definitions, particular reasons, or meanings directly from the original question and answer. The information requested is fully contained in the original question or answer.</li>
+                            <li><strong>Related</strong>: The follow-up question primarily seeks information from the original question or answer but also brings in additional, new information.</li>
+                            <li><strong>Slightly Related</strong>: The follow-up question mainly addresses other cases but has some relevance to the original question or answer.</li>
+                            <li><strong>Not Related</strong>: The follow-up question does not relate to the original question or answer.</li>
+                        </ul>
+                        </p>
+                    </div>
+                    <hr>
+                    <br>
+
+                    <h3 style="text-align: center;">Related Follow-up Questions Example #1</h3>
+
+                    <h4><b>Initial Question:</b></h4>
+                    <p>ELI5: What is an NFT?</p>
+
+                    <h4><b>Initial Answer:</b></h4>
+                    <p>They’re kind of like digital trading cards. You buy a thing that represents a digital thing (an image or tweet or whatever else), and then you can turn around and sell that token for hopefully more money than you paid for it. Some important things to note: 
+                    <ul>
+                        <li>Owning the token provides you with no practical rights to the thing (for example, you can’t prevent others from using or displaying it).</li>
+                        <li>The token is safe from counterfeiting because it’s backed by the block-chain (no one else can steal your token or produce a fake one).</li>
+                        <li>Because it’s backed by the block-chain, every transaction that happens with your token uses a <strong>lot</strong> of electricity, which is a problem.</li>
+                    </ul>
+                    </p>
+
+                    <h4><b>Follow-up Question:</b></h4>
+                    <p>Is it possible to monetize the usage or display of the NFT? Like royalties for memes?</p>
+
+                    <h4><b>Reason For Being Related:</b></h4>
+                    <p>Reason: This follow-up question mainly asks information about NFTs but relates specifically to the concept of “royalties for memes,” which is a relevant extension of the original topic.</p>
+                `,
+                slightly_related_example: `
+                    <div style="text-align: center;">
+                        <h3>Relatedness of Follow-Up Question</h3>
+                        <h4>Our Question:</h4>
+                        <p>Do you think the follow-up question is related to the initial question or the answer?</p>
+                        <h4>Your Options:</h4>
+                        <p>A. Strongly Related B. Related C. Slightly Related D. Not Related</p>
+                        <p>Guideline: 
+                        <ul>
+                            <li><strong>Strongly Related</strong>: The follow-up question asks for specific definitions, particular reasons, or meanings directly from the original question and answer. The information requested is fully contained in the original question or answer.</li>
+                            <li><strong>Related</strong>: The follow-up question primarily seeks information from the original question or answer but also brings in additional, new information.</li>
+                            <li><strong>Slightly Related</strong>: The follow-up question mainly addresses other cases but has some relevance to the original question or answer.</li>
+                            <li><strong>Not Related</strong>: The follow-up question does not relate to the original question or answer.</li>
+                        </ul>
+                        </p>
+                    </div>
+                    <hr>
+                    <br>
+
+                    <h3 style="text-align: center;">Slightly Related Follow-up Questions Example</h3>
+
+                    <h4><b>Initial Question:</b></h4>
+                    <p>ELI5: Why turning something off, then on again actually fixes issues?</p>
+
+                    <h4><b>Initial Answer:</b></h4>
+                    <p>Turning something off brings it back to a known good state, and powering it up puts it through a known good set of steps. During the time it was on, errors and junk data and black magic might have occurred, giving bad data to good processes, resulting in poor performance.</p>
+
+                    <h4><b>Follow-up Question:</b></h4>
+                    <p>Is it practically the same for software when uninstalling and then reinstalling it?</p>
+
+                    <h4><b>Reason For Being Slightly Related:</b></h4>
+                    <p>Reason: This follow-up question is asking whether the information in the answer is also applicable to other cases, like software installation. The goal is to apply the principle of “fixing” to the software context while also referencing the idea in the original answer. Therefore, it is slightly related to the given answer.</p>
+                `,
+                not_related_example: `
+                    <div style="text-align: center;">
+                        <h3>Relatedness of Follow-Up Question</h3>
+                        <h4>Our Question:</h4>
+                        <p>Do you think the follow-up question is related to the initial question or the answer?</p>
+                        <h4>Your Options:</h4>
+                        <p>A. Strongly Related B. Related C. Slightly Related D. Not Related</p>
+                        <p>Guideline: 
+                        <ul>
+                            <li><strong>Strongly Related</strong>: The follow-up question asks for specific definitions, particular reasons, or meanings directly from the original question and answer. The information requested is fully contained in the original question or answer.</li>
+                            <li><strong>Related</strong>: The follow-up question primarily seeks information from the original question or answer but also brings in additional, new information.</li>
+                            <li><strong>Slightly Related</strong>: The follow-up question mainly addresses other cases but has some relevance to the original question or answer.</li>
+                            <li><strong>Not Related</strong>: The follow-up question does not relate to the original question or answer.</li>
+                        </ul>
+                        </p>
+                    </div>
+                    <hr>
+                    <br>
+
+                    <h3 style="text-align: center;">Not Related Follow-up Questions Example</h3>
+
+                    <h4><b>Initial Question:</b></h4>
+                    <p>ELI5: Why does light get absorbed in black holes if photons are massless?</p>
+
+                    <h4><b>Initial Answer:</b></h4>
+                    <p>Photons are “massless”, but not really. They’re still physical and can be impacted by gravity. This is why light can ‘curve’ around a dense object like a planet. Black Holes have crazy amounts of gravity, and literally trap light inside.</p>
+
+                    <h4><b>Follow-up Question:</b></h4>
+                    <p>Theory on Newton’s law?</p>
+
+                    <h4><b>Reason For Being Not Related:</b></h4>
+                    <p>Reason: Newton’s law is unrelated to the original question and its answer. The follow-up question introduces a new topic (Newton's law), which has no connection to the concepts discussed in the initial question about light and black holes. Therefore, it can be considered as "NOT RELATED" to the given answer.</p>
+                `
+            };
+
+            function changeContent(example_name, button) {
+                if (button) {
+                    const buttons = document.querySelectorAll('.example-buttons');
+                    buttons.forEach(btn => {
+                        btn.classList.remove('selected');
+                    });
+
+                    button.classList.add('selected');
+                }
+
+                document.getElementById('right-section').innerHTML = examples[example_name];
+            };
+
+            window.onload = function () {
+                changeContent('valid_example', null);
+            };
+        </script>
+
+        <script>
+            $(function () {
+                function showQuestion() {
+                    // UNCOMMENT TO USE IN MTURK CODE
+                    // var questionIndex = 0;
+                    // var questions = {{ task.row_data['question'] }};
+                    // var answers = {{ task.row_data['answer'] }};
+                    // var followUpQuestions = {{ task.row_data['follow-up'] }};
+
+                    // EXAMPLE OF HOW IT SHOULD WORK
+                    const data = [];
+                    async function loadCSV() {
+                        const response = await fetch('data/train_manual.csv');
+                        const data = await response.text();
+                        const rows = data.split('\n').slice(1); // Remove header
+
+                        rows.forEach(row => {
+                            const cols = row.split(',');
+                            data.push({
+                                id: cols[0],
+                                question: cols[1].replace(/\"/g, ""), // Remove quotes
+                                answer: cols[2].replace(/\"/g, ""), // Remove quotes
+                                followUp: cols[3] ? cols[3].replace(/\"/g, "") : "" // Remove quotes
+                            });
+                        });
+                    }
+
+                    loadCSV().then(() => {
+                        console.log("data is:", data);
+                    });
+
+                    var questionIndex = 0;
+
+
+                    var exampleQuestion = "Do animals tan?";
+                    var exampleAnswer = "Animals can get sunburned like we do, pigs for example root in mud to cool off and because mud is a form of sun protection. Animals with fur cannot get sunburned where and when the fur covers them but can get burned on their lips and eyelids.";
+                    var exampleFollowUpQuestion = "But can they tan? Does their body create color to protect them?"
+                    var examples = [exampleQuestion, exampleAnswer, exampleFollowUpQuestion]
+                    var exampleTitles = ["Question", "Answer", "Follow-up Question"]
+
+                    var annotationQuestions = {
+                        1: "Is the follow-up question a complete question asking for new information?",
+                        2: "Does the data sample contain controversial topics?",
+                        3: "What is the relatedness of the follow-up question to the initial question and answer?"
+                    }
+
+                    var annotationOptions = {
+                        binary: ['Yes', 'No'],
+                        relatedness: ['Strongly Related', 'Related', 'Slightly Related', 'Not Related']
+                    }
+
+                    // Generating example 
+                    var exampleDataHTML = "";
+                    examples.forEach(function (data, index) {
+                        exampleDataHTML += `<p id="example_` + index + `"><b>` + exampleTitles[index] + `: </b>` + data + `</p>`;
+                    });
+                    $("#data_container").html(exampleDataHTML);
+
+                    // Generating annotation task questions
+                    var annotationQuestionsHTML = "";
+                    Object.entries(annotationQuestions).forEach(([key, value]) => {
+                        if (key == 3) {
+                            annotationQuestionsHTML += `
+                            <div class="ratings-group">
+                                <h4>Question ` + key + `:</h4>
+                                <br>
+                                <div>
+                                    <strong>` + value + `:</strong><br/>
+                                    <label><input type="radio" name="` + annotationOptions.relatedness[0] + `" value="` + annotationOptions.relatedness[0] + `" required>` + annotationOptions.relatedness[0] + `</label>
+                                    <label><input type="radio" name="` + annotationOptions.relatedness[1] + `" value="` + annotationOptions.relatedness[1] + `" required>` + annotationOptions.relatedness[1] + `</label>
+                                    <label><input type="radio" name="` + annotationOptions.relatedness[2] + `" value="` + annotationOptions.relatedness[2] + `" required>` + annotationOptions.relatedness[2] + `</label>
+                                    <label><input type="radio" name="` + annotationOptions.relatedness[3] + `" value="` + annotationOptions.relatedness[3] + `" required>` + annotationOptions.relatedness[3] + `</label>
+                                    <label><input type="radio" name="` + annotationOptions.relatedness[4] + `" value="` + annotationOptions.relatedness[4] + `" required>` + annotationOptions.relatedness[4] + `</label>
+                                </div>
+                                <br>
+                            </div>
+                            <hr/>
+                        `;
+                        }
+                        else {
+                            annotationQuestionsHTML += `
+                            <div class="ratings-group">
+                                <h4>Question ` + key + `:</h4>
+                                <br>
+                                <div>
+                                    <strong>` + value + `:</strong><br/>
+                                    <label><input type="radio" name="` + annotationOptions.binary[0] + `" value="` + annotationOptions.binary[0] + `" required>` + annotationOptions.binary[0] + `</label>
+                                    <label><input type="radio" name="` + annotationOptions.binary[1] + `" value="` + annotationOptions.binary[1] + `" > ` + annotationOptions.binary[1] + `</label>
+                                </div>
+                                <br>
+                            </div>
+                            <hr/>
+                        `;
+                        }
+                    });
+                    $("#annotation-questions-container").html(annotationQuestionsHTML);
+                }
+                showQuestion()
+            });
+        </script>
+</body>
+
+</html>
