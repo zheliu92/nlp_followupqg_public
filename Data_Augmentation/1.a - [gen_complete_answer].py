@@ -1,7 +1,9 @@
 import json
 from llm import llm_response
 
-with open("cleaned_train.json", "r") as f:
+with open("Data_Augmentation/test.json", "r") as f:
+# Data_Augmentation/test.json 
+# with open("cleaned_train.json", "r") as f:
     data = json.load(f)
 
 
@@ -67,13 +69,14 @@ for i in range(len(data)):
     task_sample = data[i]
     id= data[i]["id"]
     question = data[i]["question"]
-    answers = data[i]["answers"]
+    # answers = data[i]["answers"]
+    answer = data[i]["answer"]
 
     c_a = complete_answer(question)
-    for answer in answers:
-        res.append({"question": question, "answer": answer["answer"], "complete_answer": c_a})
+    # for answer in answers:
+    res.append({"question": question, "answer": answer, "complete_answer": c_a})
 
     print("Task", id, "completed")
     json_data = json.dumps(res, indent=2)
-    with open("complete_answers.json", "w") as f:
+    with open("Data_Augmentation/test_complete_answers.json", "w") as f:
         f.write(json_data)
