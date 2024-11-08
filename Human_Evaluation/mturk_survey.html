@@ -326,7 +326,8 @@
                         remove these noisy samples.</p>
                     <p>For each HIT, you will be shown one triple (question, answer, follow-up question). Carefully
                         review each component and answer the following questions based on your judgment:</p>
-                    <div style="background-color: #d8ebf5; padding: 15px; border-radius: 8px; margin-top: 15px; margin-left: 100px; margin-right: 100px">
+                    <div
+                        style="background-color: #d8ebf5; padding: 15px; border-radius: 8px; margin-top: 15px; margin-left: 100px; margin-right: 100px">
                         <h4>Questions:</h4>
                         <ol style="text-align: left; display: inline-block; margin: 0; padding-left: 20px;">
                             <li><strong>Q1:</strong> Do you think the follow-up question is a valid question?<br>
@@ -340,12 +341,14 @@
                             <br>
                             <li><strong>Q3:</strong> Do you think the follow-up question is related to the original
                                 question and the answer?<br>
-                                <br><strong>A:</strong> Strongly Related <strong>B:</strong> Related <strong>C:</strong> Slightly Related <strong>D:</strong> Not Related
+                                <br><strong>A:</strong> Strongly Related <strong>B:</strong> Related <strong>C:</strong>
+                                Slightly Related <strong>D:</strong> Not Related
                             </li>
                         </ol>
                     </div>
                     <br>
-                    <h4 style="color: red;">After answering all questions for a single task, click next to move to the next sample. <br>Once you complete all tasks, press submit to complete the survey.</h4>
+                    <h4 style="color: red;">After answering all questions for a single task, click next to move to the
+                        next sample. <br>Once you complete all tasks, press submit to complete the survey.</h4>
                     <br>
                 </div>
                 <div class="examples">
@@ -424,6 +427,8 @@
         <script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
 
         <script>
+            console.log("hello");
+
             const examples = {
                 invalid_example: `
                     <div style="text-align: center;">
@@ -667,6 +672,41 @@
                 `
             };
 
+            // MTURk Code 
+            // var keys = {{ task.row_data['id'] }};
+            // var questions = {{ task.row_data['question'] }};
+            // var answers = {{ task.row_data['answer'] }};
+            // var followUpQuestions = {{ task.row_data['follow-up'] }};
+
+            // Test Code - comment out when in production
+            var keys = [1,2,3];
+            var questions = ['1', '2', '3'];
+            var answers = ['1', '2', '3'];
+            var followUpQuestions = ['1', '2', '3'];
+
+
+            // Index to keep track of questions
+            var questionIndex = 0;
+
+            // number of samples
+            const sampleCount = 20;
+
+            // Data to Annotate (LHS of survey)
+            var dataToAnnotate = [questions, answers, followUpQuestions];
+            var dataToAnnotateTitles = ["Question", "Answer", "Follow-up Question"];
+            
+            // Annotation Task Questions and Options (RHS of Survey)
+            var annotationQuestions = {
+                1: "Is the follow-up question a complete question asking for new information?",
+                2: "Does the data sample contain controversial topics?",
+                3: "What is the relatedness of the follow-up question to the initial question and answer?"
+            };
+            var annotationOptions = {
+                binary: ['Yes', 'No'],
+                relatedness: ['Strongly Related', 'Related', 'Slightly Related', 'Not Related']
+            };
+
+            // **Generate example content
             function changeContent(example_name, button) {
                 if (button) {
                     const buttons = document.querySelectorAll('.example-buttons');
@@ -678,113 +718,127 @@
                 }
 
                 document.getElementById('right-section').innerHTML = examples[example_name];
-            };
+            }
+
+            // *Generate the Survey's LHS HTML
+            function generateHTMLDataToAnnotate() {
+                var titlesIndex = 0;
+
+                var dataToAnnotateHTML = "";
+                dataToAnnotate.forEach(function (data, index) {
+                    dataToAnnotateHTML += `<p id="example_` + index + `"><b>` + dataToAnnotateTitles[titlesIndex] + `: </b>` + data[questionIndex] + `</p>`;
+
+                    titlesIndex++;
+                });
+                $("#data_container").html(dataToAnnotateHTML);
+            }
+
+            // *Generate the Survey's RHS HTML
+            function generateHTMLAnnotation() {
+                var nameBase = keys[questionIndex] + `_`;
+                var relatednessNameBase = nameBase + `relatedness_`;
+                var validnessNameBase = nameBase + `validness_`;
+                var appropriatenessNameBase = nameBase + `appropriateness_`;
+
+                Object.entries(annotationQuestions).forEach(([key, value]) => {
+                    if (key == 3) {
+                        annotationQuestionsHTML += `
+                        <div class="ratings-group" data-question="` + key + `">
+                            <h4>Question ` + key + `:</h4>
+                            <br>
+                            <div>
+                                <strong>` + value + `:</strong><br/>
+                                <label><input type="radio" name="` + relatednessNameBase + annotationOptions.relatedness[0] + `" value="` + annotationOptions.relatedness[0] + `" required>` + annotationOptions.relatedness[0] + `</label>
+
+                                <label><input type="radio" name="` + relatednessNameBase + annotationOptions.relatedness[1] + `" value="` + annotationOptions.relatedness[1] + `" required>` + annotationOptions.relatedness[1] + `</label>
+
+                                <label><input type="radio" name="` + relatednessNameBase + annotationOptions.relatedness[2] + `" value="` + annotationOptions.relatedness[2] + `" required>` + annotationOptions.relatedness[2] + `</label>
+
+                                <label><input type="radio" name="` + relatednessNameBase + annotationOptions.relatedness[3] + `" value="` + annotationOptions.relatedness[3] + `" required>` + annotationOptions.relatedness[3] + `</label>
+
+                                <label><input type="radio" name="` + relatednessNameBase + annotationOptions.relatedness[4] + `" value="` + annotationOptions.relatedness[4] + `" required>` + annotationOptions.relatedness[4] + `</label>
+                            </div>
+                            <br>
+                        </div>
+                        <hr/>
+                    `;
+                    }
+                    else {
+                        annotationQuestionsHTML += `
+                        <div class="ratings-group" data-question="` + key + `">
+                            <h4>Question ` + key + `:</h4>
+                            <br>
+                            <div>
+                                <strong>` + value + `:</strong><br/>
+                                <label><input type="radio" name="` + validnessNameBase + annotationOptions.binary[0] + `" value="` + annotationOptions.binary[0] + `" required>` + annotationOptions.binary[0] + `</label>
+                                <label><input type="radio" name="` + appropriatenessNameBase + annotationOptions.binary[1] + `" value="` + annotationOptions.binary[1] + `" > ` + annotationOptions.binary[1] + `</label>
+                            </div>
+                            <br>
+                        </div>
+                        <hr/>
+                    `;
+                    }
+                });
+                $("#annotation-questions-container").html(annotationQuestionsHTML);
+            }
+
+            // Updates progress bar 
+            function updateProgressBar() {
+                var current = questionIndex + 1; // +1 to make it 1-based
+                var percentage = (current / sampleCount) * 100;
+                $("#progress-bar").css('width', percentage + '%');
+            }
+
+            // validates input to radio buttons before moving to the next task
+            function validateCurrentStep() {
+                const ratingGroups = document.querySelectorAll('.ratings-group');
+                let valid = true;
+
+                ratingGroups.forEach(group => {
+                    const questionName = group.getAttribute('data-question');
+                    const selectedOption = document.querySelector(`input[name="${questionName}"]:checked`);
+                })
+
+                return valid
+            }
+
+            function showQuestion() {
+                // document.body.style.backgroundColor = "yellow";
+                console.log("hello");
+                generateHTMLDataToAnnotate();
+                generateHTMLAnnotation();
+                updateProgressBar();
+            }
+
+            // Listeners
+            // The Next button listener
+            $("#next-btn").on('click', function () {
+                // Ensure all toggles have been selectef for the current HIT
+                if (!validateCurrentStep()) {
+                    $("#validation-message").show();
+                    return;
+                } else {
+                    $("#validation-message").hide();
+                }
+                
+                // Conditionally Disable/Enable Next & Submit buttons
+                if (questionIndex < sampleCount - 1) {
+                    questionIndex++;
+                    showQuestion();
+                    $("#crowd-button").prop('disabled', true);
+                    $('#next-btn').prop('disabled', false);
+                } else {
+                    $("#crowd-button").prop('disabled', false);
+                    $('#next-btn').prop('disabled', true);
+                }
+            });
 
             window.onload = function () {
                 changeContent('valid_example', null);
+                showQuestion();
             };
         </script>
-
-        <script>
-            $(function () {
-                function showQuestion() {
-                    // UNCOMMENT TO USE IN MTURK CODE
-                    // var questionIndex = 0;
-                    // var questions = {{ task.row_data['question'] }};
-                    // var answers = {{ task.row_data['answer'] }};
-                    // var followUpQuestions = {{ task.row_data['follow-up'] }};
-
-                    // EXAMPLE OF HOW IT SHOULD WORK
-                    const data = [];
-                    async function loadCSV() {
-                        const response = await fetch('data/train_manual.csv');
-                        const data = await response.text();
-                        const rows = data.split('\n').slice(1); // Remove header
-
-                        rows.forEach(row => {
-                            const cols = row.split(',');
-                            data.push({
-                                id: cols[0],
-                                question: cols[1].replace(/\"/g, ""), // Remove quotes
-                                answer: cols[2].replace(/\"/g, ""), // Remove quotes
-                                followUp: cols[3] ? cols[3].replace(/\"/g, "") : "" // Remove quotes
-                            });
-                        });
-                    }
-
-                    loadCSV().then(() => {
-                        console.log("data is:", data);
-                    });
-
-                    var questionIndex = 0;
-
-
-                    var exampleQuestion = "Do animals tan?";
-                    var exampleAnswer = "Animals can get sunburned like we do, pigs for example root in mud to cool off and because mud is a form of sun protection. Animals with fur cannot get sunburned where and when the fur covers them but can get burned on their lips and eyelids.";
-                    var exampleFollowUpQuestion = "But can they tan? Does their body create color to protect them?"
-                    var examples = [exampleQuestion, exampleAnswer, exampleFollowUpQuestion]
-                    var exampleTitles = ["Question", "Answer", "Follow-up Question"]
-
-                    var annotationQuestions = {
-                        1: "Is the follow-up question a complete question asking for new information?",
-                        2: "Does the data sample contain controversial topics?",
-                        3: "What is the relatedness of the follow-up question to the initial question and answer?"
-                    }
-
-                    var annotationOptions = {
-                        binary: ['Yes', 'No'],
-                        relatedness: ['Strongly Related', 'Related', 'Slightly Related', 'Not Related']
-                    }
-
-                    // Generating example 
-                    var exampleDataHTML = "";
-                    examples.forEach(function (data, index) {
-                        exampleDataHTML += `<p id="example_` + index + `"><b>` + exampleTitles[index] + `: </b>` + data + `</p>`;
-                    });
-                    $("#data_container").html(exampleDataHTML);
-
-                    // Generating annotation task questions
-                    var annotationQuestionsHTML = "";
-                    Object.entries(annotationQuestions).forEach(([key, value]) => {
-                        if (key == 3) {
-                            annotationQuestionsHTML += `
-                            <div class="ratings-group">
-                                <h4>Question ` + key + `:</h4>
-                                <br>
-                                <div>
-                                    <strong>` + value + `:</strong><br/>
-                                    <label><input type="radio" name="` + annotationOptions.relatedness[0] + `" value="` + annotationOptions.relatedness[0] + `" required>` + annotationOptions.relatedness[0] + `</label>
-                                    <label><input type="radio" name="` + annotationOptions.relatedness[1] + `" value="` + annotationOptions.relatedness[1] + `" required>` + annotationOptions.relatedness[1] + `</label>
-                                    <label><input type="radio" name="` + annotationOptions.relatedness[2] + `" value="` + annotationOptions.relatedness[2] + `" required>` + annotationOptions.relatedness[2] + `</label>
-                                    <label><input type="radio" name="` + annotationOptions.relatedness[3] + `" value="` + annotationOptions.relatedness[3] + `" required>` + annotationOptions.relatedness[3] + `</label>
-                                    <label><input type="radio" name="` + annotationOptions.relatedness[4] + `" value="` + annotationOptions.relatedness[4] + `" required>` + annotationOptions.relatedness[4] + `</label>
-                                </div>
-                                <br>
-                            </div>
-                            <hr/>
-                        `;
-                        }
-                        else {
-                            annotationQuestionsHTML += `
-                            <div class="ratings-group">
-                                <h4>Question ` + key + `:</h4>
-                                <br>
-                                <div>
-                                    <strong>` + value + `:</strong><br/>
-                                    <label><input type="radio" name="` + annotationOptions.binary[0] + `" value="` + annotationOptions.binary[0] + `" required>` + annotationOptions.binary[0] + `</label>
-                                    <label><input type="radio" name="` + annotationOptions.binary[1] + `" value="` + annotationOptions.binary[1] + `" > ` + annotationOptions.binary[1] + `</label>
-                                </div>
-                                <br>
-                            </div>
-                            <hr/>
-                        `;
-                        }
-                    });
-                    $("#annotation-questions-container").html(annotationQuestionsHTML);
-                }
-                showQuestion()
-            });
-        </script>
+    </div>
 </body>
 
 </html>
