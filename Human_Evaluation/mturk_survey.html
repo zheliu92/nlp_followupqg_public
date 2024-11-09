@@ -427,8 +427,6 @@
         <script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
 
         <script>
-            console.log("hello");
-
             const examples = {
                 invalid_example: `
                     <div style="text-align: center;">
@@ -673,17 +671,16 @@
             };
 
             // MTURk Code 
-            // var keys = {{ task.row_data['id'] }};
-            // var questions = {{ task.row_data['question'] }};
-            // var answers = {{ task.row_data['answer'] }};
-            // var followUpQuestions = {{ task.row_data['follow-up'] }};
+            var keys = {{ task.row_data['id'] }};
+            var questions = {{ task.row_data['question'] }};
+            var answers = {{ task.row_data['answer'] }};
+            var followUpQuestions = {{ task.row_data['follow-ups'] }};
 
             // Test Code - comment out when in production
-            var keys = [1,2,3];
-            var questions = ['1', '2', '3'];
-            var answers = ['1', '2', '3'];
-            var followUpQuestions = ['1', '2', '3'];
-
+            // var keys = [1,2,3];
+            // var questions = ['1', '2', '3'];
+            // var answers = ['1', '2', '3'];
+            // var followUpQuestions = ['1', '2', '3'];
 
             // Index to keep track of questions
             var questionIndex = 0;
@@ -705,7 +702,7 @@
                 binary: ['Yes', 'No'],
                 relatedness: ['Strongly Related', 'Related', 'Slightly Related', 'Not Related']
             };
-
+            
             // **Generate example content
             function changeContent(example_name, button) {
                 if (button) {
@@ -735,51 +732,69 @@
 
             // *Generate the Survey's RHS HTML
             function generateHTMLAnnotation() {
-                var nameBase = keys[questionIndex] + `_`;
-                var relatednessNameBase = nameBase + `relatedness_`;
-                var validnessNameBase = nameBase + `validness_`;
-                var appropriatenessNameBase = nameBase + `appropriateness_`;
+                allAnnotationQuestionsHTML = ``;
+                for (let i = 0; i<sampleCount; i++) {
+                    var nameBase = keys[i] + `_`;
+                    var relatednessNameBase = nameBase + `relatedness`;
+                    var validnessNameBase = nameBase + `validness`;
+                    var appropriatenessNameBase = nameBase + `appropriateness`;
+                    var annotationQuestionsHTML = `<div id="question-block-`+i+`" class="question-block" style="display: none;">`
 
-                Object.entries(annotationQuestions).forEach(([key, value]) => {
-                    if (key == 3) {
-                        annotationQuestionsHTML += `
-                        <div class="ratings-group" data-question="` + key + `">
-                            <h4>Question ` + key + `:</h4>
-                            <br>
-                            <div>
-                                <strong>` + value + `:</strong><br/>
-                                <label><input type="radio" name="` + relatednessNameBase + annotationOptions.relatedness[0] + `" value="` + annotationOptions.relatedness[0] + `" required>` + annotationOptions.relatedness[0] + `</label>
-
-                                <label><input type="radio" name="` + relatednessNameBase + annotationOptions.relatedness[1] + `" value="` + annotationOptions.relatedness[1] + `" required>` + annotationOptions.relatedness[1] + `</label>
-
-                                <label><input type="radio" name="` + relatednessNameBase + annotationOptions.relatedness[2] + `" value="` + annotationOptions.relatedness[2] + `" required>` + annotationOptions.relatedness[2] + `</label>
-
-                                <label><input type="radio" name="` + relatednessNameBase + annotationOptions.relatedness[3] + `" value="` + annotationOptions.relatedness[3] + `" required>` + annotationOptions.relatedness[3] + `</label>
-
-                                <label><input type="radio" name="` + relatednessNameBase + annotationOptions.relatedness[4] + `" value="` + annotationOptions.relatedness[4] + `" required>` + annotationOptions.relatedness[4] + `</label>
+                    Object.entries(annotationQuestions).forEach(([key, value]) => {
+                        if (key == 1) {
+                            annotationQuestionsHTML += `
+                            <div class="ratings-group" data-question="` + key + `">
+                                <h4>Question ` + key + `:</h4>
+                                <br>
+                                <div>
+                                    <strong>` + value + `:</strong><br/>
+                                    <label><input type="radio" name="` + validnessNameBase + `" value="` + annotationOptions.binary[0] + `" required>` + annotationOptions.binary[0] + `</label>
+                                    <label><input type="radio" name="` + validnessNameBase + `" value="` + annotationOptions.binary[1] + `" > ` + annotationOptions.binary[1] + `</label>
+                                </div>
+                                <br>
                             </div>
-                            <br>
-                        </div>
-                        <hr/>
-                    `;
-                    }
-                    else {
-                        annotationQuestionsHTML += `
-                        <div class="ratings-group" data-question="` + key + `">
-                            <h4>Question ` + key + `:</h4>
-                            <br>
-                            <div>
-                                <strong>` + value + `:</strong><br/>
-                                <label><input type="radio" name="` + validnessNameBase + annotationOptions.binary[0] + `" value="` + annotationOptions.binary[0] + `" required>` + annotationOptions.binary[0] + `</label>
-                                <label><input type="radio" name="` + appropriatenessNameBase + annotationOptions.binary[1] + `" value="` + annotationOptions.binary[1] + `" > ` + annotationOptions.binary[1] + `</label>
+                            <hr/>`;
+                        }
+                        if (key == 2) {
+                            annotationQuestionsHTML += `
+                            <div class="ratings-group" data-question="` + key + `">
+                                <h4>Question ` + key + `:</h4>
+                                <br>
+                                <div>
+                                    <strong>` + value + `:</strong><br/>
+                                    <label><input type="radio" name="` + appropriatenessNameBase + `" value="` + annotationOptions.binary[0] + `" required>` + annotationOptions.binary[0] + `</label>
+                                    <label><input type="radio" name="` + appropriatenessNameBase + `" value="` + annotationOptions.binary[1] + `" > ` + annotationOptions.binary[1] + `</label>
+                                </div>
+                                <br>
                             </div>
-                            <br>
-                        </div>
-                        <hr/>
-                    `;
-                    }
-                });
-                $("#annotation-questions-container").html(annotationQuestionsHTML);
+                            <hr/>`;
+                        }
+                        if (key == 3) {
+                            annotationQuestionsHTML += `
+                            <div class="ratings-group" data-question="` + key + `">
+                                <h4>Question ` + key + `:</h4>
+                                <br>
+                                <div>
+                                    <strong>` + value + `:</strong><br/>
+                                    <label><input type="radio" name="` + relatednessNameBase + `" value="` + annotationOptions.relatedness[0] + `" required>` + annotationOptions.relatedness[0] + `</label>
+
+                                    <label><input type="radio" name="` + relatednessNameBase + `" value="` + annotationOptions.relatedness[1] + `" required>` + annotationOptions.relatedness[1] + `</label>
+
+                                    <label><input type="radio" name="` + relatednessNameBase + `" value="` + annotationOptions.relatedness[2] + `" required>` + annotationOptions.relatedness[2] + `</label>
+
+                                    <label><input type="radio" name="` + relatednessNameBase + `" value="` + annotationOptions.relatedness[3] + `" required>` + annotationOptions.relatedness[3] + `</label>
+                                </div>
+                                <br>
+                            </div>
+                            <hr/>
+                        `;
+                        }
+                    });
+
+                    annotationQuestionsHTML+= `</div>`
+                    allAnnotationQuestionsHTML += annotationQuestionsHTML
+                }
+                $("#annotation-questions-container").html(allAnnotationQuestionsHTML);
             }
 
             // Updates progress bar 
@@ -791,22 +806,31 @@
 
             // validates input to radio buttons before moving to the next task
             function validateCurrentStep() {
-                const ratingGroups = document.querySelectorAll('.ratings-group');
+                const questionBlock = document.querySelector(`#question-block-` + questionIndex);
+                if (!questionBlock) {
+                    console.error('Question block not found!');
+                    return false;
+                }
+                const ratingGroups = questionBlock.querySelectorAll('.ratings-group');
+
                 let valid = true;
 
                 ratingGroups.forEach(group => {
                     const questionName = group.getAttribute('data-question');
-                    const selectedOption = document.querySelector(`input[name="${questionName}"]:checked`);
+                    const selectedOption = document.querySelector(`input[type="radio"]:checked`);
+
+                    if (!selectedOption) {
+                        valid = false
+                    }
                 })
 
                 return valid
             }
 
             function showQuestion() {
-                // document.body.style.backgroundColor = "yellow";
-                console.log("hello");
+                $(".question-block").hide();
+                $(`#question-block-`+questionIndex).show();
                 generateHTMLDataToAnnotate();
-                generateHTMLAnnotation();
                 updateProgressBar();
             }
 
@@ -833,10 +857,11 @@
                 }
             });
 
-            window.onload = function () {
+            $(document).ready(function () {
                 changeContent('valid_example', null);
+                generateHTMLAnnotation();
                 showQuestion();
-            };
+            });
         </script>
     </div>
 </body>
