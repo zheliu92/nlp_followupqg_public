@@ -1,0 +1,284 @@
+[
+  {
+    "10660_appropriateness": {
+      "No": false,
+      "Yes": true
+    },
+    "10660_relatedness": {
+      "Not Related": false,
+      "Related": false,
+      "Slightly Related": false,
+      "Strongly Related": true
+    },
+    "10660_validness": {
+      "No": false,
+      "Yes": true
+    },
+    "11793_appropriateness": {
+      "No": true,
+      "Yes": false
+    },
+    "11793_relatedness": {
+      "Not Related": true,
+      "Related": false,
+      "Slightly Related": false,
+      "Strongly Related": false
+    },
+    "11793_validness": {
+      "No": true,
+      "Yes": false
+    },
+    "12843_appropriateness": {
+      "No": false,
+      "Yes": true
+    },
+    "12843_relatedness": {
+      "Not Related": true,
+      "Related": false,
+      "Slightly Related": false,
+      "Strongly Related": false
+    },
+    "12843_validness": {
+      "No": true,
+      "Yes": false
+    },
+    "13658_appropriateness": {
+      "No": false,
+      "Yes": true
+    },
+    "13658_relatedness": {
+      "Not Related": false,
+      "Related": false,
+      "Slightly Related": true,
+      "Strongly Related": false
+    },
+    "13658_validness": {
+      "No": false,
+      "Yes": true
+    },
+    "1460_appropriateness": {
+      "No": false,
+      "Yes": true
+    },
+    "1460_relatedness": {
+      "Not Related": false,
+      "Related": false,
+      "Slightly Related": true,
+      "Strongly Related": false
+    },
+    "1460_validness": {
+      "No": false,
+      "Yes": true
+    },
+    "16507_appropriateness": {
+      "No": false,
+      "Yes": true
+    },
+    "16507_relatedness": {
+      "Not Related": false,
+      "Related": true,
+      "Slightly Related": false,
+      "Strongly Related": false
+    },
+    "16507_validness": {
+      "No": false,
+      "Yes": true
+    },
+    "17684_appropriateness": {
+      "No": true,
+      "Yes": false
+    },
+    "17684_relatedness": {
+      "Not Related": false,
+      "Related": false,
+      "Slightly Related": true,
+      "Strongly Related": false
+    },
+    "17684_validness": {
+      "No": false,
+      "Yes": true
+    },
+    "18074_appropriateness": {
+      "No": true,
+      "Yes": false
+    },
+    "18074_relatedness": {
+      "Not Related": true,
+      "Related": false,
+      "Slightly Related": false,
+      "Strongly Related": false
+    },
+    "18074_validness": {
+      "No": true,
+      "Yes": false
+    },
+    "19758_appropriateness": {
+      "No": false,
+      "Yes": true
+    },
+    "19758_relatedness": {
+      "Not Related": false,
+      "Related": false,
+      "Slightly Related": true,
+      "Strongly Related": false
+    },
+    "19758_validness": {
+      "No": false,
+      "Yes": true
+    },
+    "2092_appropriateness": {
+      "No": false,
+      "Yes": true
+    },
+    "2092_relatedness": {
+      "Not Related": false,
+      "Related": true,
+      "Slightly Related": false,
+      "Strongly Related": false
+    },
+    "2092_validness": {
+      "No": false,
+      "Yes": true
+    },
+    "23129_appropriateness": {
+      "No": false,
+      "Yes": true
+    },
+    "23129_relatedness": {
+      "Not Related": true,
+      "Related": false,
+      "Slightly Related": false,
+      "Strongly Related": false
+    },
+    "23129_validness": {
+      "No": false,
+      "Yes": true
+    },
+    "24508_appropriateness": {
+      "No": true,
+      "Yes": false
+    },
+    "24508_relatedness": {
+      "Not Related": true,
+      "Related": false,
+      "Slightly Related": false,
+      "Strongly Related": false
+    },
+    "24508_validness": {
+      "No": false,
+      "Yes": true
+    },
+    "24618_appropriateness": {
+      "No": false,
+      "Yes": true
+    },
+    "24618_relatedness": {
+      "Not Related": false,
+      "Related": false,
+      "Slightly Related": true,
+      "Strongly Related": false
+    },
+    "24618_validness": {
+      "No": false,
+      "Yes": true
+    },
+    "25372_appropriateness": {
+      "No": true,
+      "Yes": false
+    },
+    "25372_relatedness": {
+      "Not Related": false,
+      "Related": false,
+      "Slightly Related": false,
+      "Strongly Related": true
+    },
+    "25372_validness": {
+      "No": true,
+      "Yes": false
+    },
+    "2905_appropriateness": {
+      "No": false,
+      "Yes": true
+    },
+    "2905_relatedness": {
+      "Not Related": false,
+      "Related": true,
+      "Slightly Related": false,
+      "Strongly Related": false
+    },
+    "2905_validness": {
+      "No": false,
+      "Yes": true
+    },
+    "3293_appropriateness": {
+      "No": true,
+      "Yes": false
+    },
+    "3293_relatedness": {
+      "Not Related": false,
+      "Related": false,
+      "Slightly Related": true,
+      "Strongly Related": false
+    },
+    "3293_validness": {
+      "No": false,
+      "Yes": true
+    },
+    "3697_appropriateness": {
+      "No": false,
+      "Yes": true
+    },
+    "3697_relatedness": {
+      "Not Related": false,
+      "Related": false,
+      "Slightly Related": true,
+      "Strongly Related": false
+    },
+    "3697_validness": {
+      "No": true,
+      "Yes": false
+    },
+    "4712_appropriateness": {
+      "No": false,
+      "Yes": true
+    },
+    "4712_relatedness": {
+      "Not Related": true,
+      "Related": false,
+      "Slightly Related": false,
+      "Strongly Related": false
+    },
+    "4712_validness": {
+      "No": false,
+      "Yes": true
+    },
+    "4754_appropriateness": {
+      "No": false,
+      "Yes": true
+    },
+    "4754_relatedness": {
+      "Not Related": false,
+      "Related": false,
+      "Slightly Related": false,
+      "Strongly Related": true
+    },
+    "4754_validness": {
+      "No": false,
+      "Yes": true
+    },
+    "8081_appropriateness": {
+      "No": true,
+      "Yes": false
+    },
+    "8081_relatedness": {
+      "Not Related": false,
+      "Related": false,
+      "Slightly Related": false,
+      "Strongly Related": true
+    },
+    "8081_validness": {
+      "No": false,
+      "Yes": true
+    }
+  }
+]
