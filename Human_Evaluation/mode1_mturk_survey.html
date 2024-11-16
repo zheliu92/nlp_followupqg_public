@@ -748,8 +748,8 @@
                                 <br>
                                 <div>
                                     <strong>` + value + `:</strong><br/>
-                                    <label><input type="radio" name="` + validnessNameBase + `" value="` + annotationOptions.binary[0] + `" required>` + annotationOptions.binary[0] + `</label>
-                                    <label><input type="radio" name="` + validnessNameBase + `" value="` + annotationOptions.binary[1] + `" > ` + annotationOptions.binary[1] + `</label>
+                                    <label><input type="radio" name="` + validnessNameBase + `" required>` + annotationOptions.binary[0] + `</label>
+                                    <label><input type="radio" name="` + validnessNameBase + `" > ` + annotationOptions.binary[1] + `</label>
                                 </div>
                                 <br>
                             </div>
@@ -762,8 +762,8 @@
                                 <br>
                                 <div>
                                     <strong>` + value + `:</strong><br/>
-                                    <label><input type="radio" name="` + appropriatenessNameBase + `" value="` + annotationOptions.binary[0] + `" required>` + annotationOptions.binary[0] + `</label>
-                                    <label><input type="radio" name="` + appropriatenessNameBase + `" value="` + annotationOptions.binary[1] + `" > ` + annotationOptions.binary[1] + `</label>
+                                    <label><input type="radio" name="` + appropriatenessNameBase + `" required>` + annotationOptions.binary[0] + `</label>
+                                    <label><input type="radio" name="` + appropriatenessNameBase + `" > ` + annotationOptions.binary[1] + `</label>
                                 </div>
                                 <br>
                             </div>
@@ -776,13 +776,13 @@
                                 <br>
                                 <div>
                                     <strong>` + value + `:</strong><br/>
-                                    <label><input type="radio" name="` + relatednessNameBase + `" value="` + annotationOptions.relatedness[0] + `" required>` + annotationOptions.relatedness[0] + `</label>
+                                    <label><input type="radio" name="` + relatednessNameBase + `" required>` + annotationOptions.relatedness[0] + `</label>
 
-                                    <label><input type="radio" name="` + relatednessNameBase + `" value="` + annotationOptions.relatedness[1] + `" required>` + annotationOptions.relatedness[1] + `</label>
+                                    <label><input type="radio" name="` + relatednessNameBase + `" required>` + annotationOptions.relatedness[1] + `</label>
 
-                                    <label><input type="radio" name="` + relatednessNameBase + `" value="` + annotationOptions.relatedness[2] + `" required>` + annotationOptions.relatedness[2] + `</label>
+                                    <label><input type="radio" name="` + relatednessNameBase + `" required>` + annotationOptions.relatedness[2] + `</label>
 
-                                    <label><input type="radio" name="` + relatednessNameBase + `" value="` + annotationOptions.relatedness[3] + `" required>` + annotationOptions.relatedness[3] + `</label>
+                                    <label><input type="radio" name="` + relatednessNameBase + `" required>` + annotationOptions.relatedness[3] + `</label>
                                 </div>
                                 <br>
                             </div>
@@ -816,8 +816,7 @@
                 let valid = true;
 
                 ratingGroups.forEach(group => {
-                    const questionName = group.getAttribute('data-question');
-                    const selectedOption = document.querySelector(`input[type="radio"]:checked`);
+                    const selectedOption = group.querySelector(`input[type="radio"]:checked`);
 
                     if (!selectedOption) {
                         valid = false
