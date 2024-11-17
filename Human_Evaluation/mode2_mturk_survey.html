@@ -657,16 +657,16 @@
             };
 
             // MTURk Code 
-            var keys = {{ task.row_data['id'] }};
-            var questions = {{ task.row_data['question'] }};
-            var answers = {{ task.row_data['answer'] }};
-            var followUpQuestions = {{ task.row_data['generated_follow_up'] }};
+            // var keys = {{ task.row_data['id'] }};
+            // var questions = {{ task.row_data['question'] }};
+            // var answers = {{ task.row_data['answer'] }};
+            // var followUpQuestions = {{ task.row_data['generated_follow_up'] }};
 
             // Test Code - comment out when in production
-            // var keys = [1, 2, 3];
-            // var questions = ['1', '2', '3'];
-            // var answers = ['1', '2', '3'];
-            // var followUpQuestions = ['1', '2', '3'];
+            var keys = [1, 2, 3];
+            var questions = ['1', '2', '3'];
+            var answers = ['1', '2', '3'];
+            var followUpQuestions = ['1', '2', '3'];
 
             // Index to keep track of questions
             var questionIndex = 0;
@@ -681,17 +681,17 @@
             // Annotation Task Questions and Options (RHS of Survey)
             var annotationQuestions = {
                 1: "Is the follow-up question a valid question?",
-                2: "Is the follow-up question relevant to the original question and answer?",
+                2: "How relevant is the follow-up question to the original question and answer?",
                 3: "Does the follow-up question contain any of the following errors?",
-                4: "Does the follow-up question require reasoning to generate?",
-                5: "Deos the follow-up question reveal new information to the audience?"
+                4: "Does generating this follow-up question require reasoning?",
+                5: "Does the follow-up question contain new information for the audience?"
             };
             var annotationOptions = {
                 binary: ['Yes', 'No'],
                 relatedness: ['Strongly Related', 'Related', 'Slightly Related', 'Not Related'],
-                errors: ['Redundant', 'Context Copy', 'Wrong Semantic Collocation', 'Other Errors', 'No Errors'],
-                reasoning: ['Yes, and Very Hard', 'Yes, but Slightly Simple', 'No Reasoning Required'],
-                newInformation: ['Yes, a lot', 'Yes, but few', 'No new information']
+                errors: ['No Errors', 'Redundant (No new information added)', 'Repetitive (Follow-up is too similar to the original Question)', 'Wrong Semantic Collocation (Grammatically / Syntactically / Pragmatically Incorrect)', 'Other Errors'],
+                reasoning: ['Requires <u>complex</u> amount of reasoning', 'Requires <u>moderate</u> amount of reasoning', 'Requires <u>minimal</u> amount of reasoning', '<u>Does not</u> require any reasoning'],
+                newInformation: ['Introduces <u>a lot</u> of new information', 'Introduces <u>some</u>  new information', 'Introduces <u>little</u>  new information', '<u>Does not</u>  introduce any new information']
             };
 
             // **Generate example content
@@ -743,7 +743,10 @@
                                 <div>
                                     <strong>` + value + `:</strong><br/>
                                     <label><input type="radio" name="` + validnessNameBase + `" value="` + annotationOptions.binary[0] + `" required onclick=toggleRemainingQuestions(true)>` + annotationOptions.binary[0] + `</label>
+                                    <br>
+
                                     <label><input type="radio" name="` + validnessNameBase + `" value="` + annotationOptions.binary[1] + `" onclick=toggleRemainingQuestions(false)>` + annotationOptions.binary[1] + `</label>
+                                    <br>
                                 </div>
                                 <br>
                             </div>
@@ -757,8 +760,17 @@
                                 <br>
                                 <div>
                                     <strong>` + value + `:</strong><br/>
-                                    <label><input type="radio" name="` + relevanceNameBase + `" value="` + annotationOptions.binary[0] + `">` + annotationOptions.binary[0] + `</label>
-                                    <label><input type="radio" name="` + relevanceNameBase + `" value="` + annotationOptions.binary[1] + `"> ` + annotationOptions.binary[1] + `</label>
+                                    <label><input type="radio" name="` + relevanceNameBase + `" value="` + annotationOptions.relatedness[0] + `">` + annotationOptions.relatedness[0] + `</label>
+                                    <br>
+
+                                    <label><input type="radio" name="` + relevanceNameBase + `" value="` + annotationOptions.relatedness[1] + `"> ` + annotationOptions.relatedness[1] + `</label>
+                                    <br>
+
+                                    <label><input type="radio" name="` + relevanceNameBase + `" value="` + annotationOptions.relatedness[2] + `"> ` + annotationOptions.relatedness[2] + `</label>
+                                    <br>
+
+                                    <label><input type="radio" name="` + relevanceNameBase + `" value="` + annotationOptions.relatedness[3] + `"> ` + annotationOptions.relatedness[3] + `</label>
+                                    <br>
                                 </div>
                                 <br>
                             </div>
@@ -772,14 +784,19 @@
                                 <div>
                                     <strong>` + value + `:</strong><br/>
                                     <label><input type="checkbox" name="` + errorNameBase + `" value="` + annotationOptions.errors[0] + `">` + annotationOptions.errors[0] + `</label>
+                                    <br>
 
                                     <label><input type="checkbox" name="` + errorNameBase + `" value="` + annotationOptions.errors[1] + `">` + annotationOptions.errors[1] + `</label>
+                                    <br>
 
                                     <label><input type="checkbox" name="` + errorNameBase + `" value="` + annotationOptions.errors[2] + `">` + annotationOptions.errors[2] + `</label>
+                                    <br>
 
                                     <label><input type="checkbox" name="` + errorNameBase + `" value="` + annotationOptions.errors[3] + `">` + annotationOptions.errors[3] + `</label>
+                                    <br>
 
                                     <label><input type="checkbox" name="` + errorNameBase + `" value="` + annotationOptions.errors[4] + `">` + annotationOptions.errors[4] + `</label>
+                                    <br>
                                 </div>
                                 <br>
                             </div>
@@ -793,8 +810,17 @@
                                 <div>
                                     <strong>` + value + `:</strong><br/>
                                     <label><input type="radio" name="` + reasoningNameBase + `" value="` + annotationOptions.reasoning[0] + `" >` + annotationOptions.reasoning[0] + `</label>
+                                    <br>
+
                                     <label><input type="radio" name="` + reasoningNameBase + `" value="` + annotationOptions.reasoning[1] + `" > ` + annotationOptions.reasoning[1] + `</label>
+                                    <br>
+
                                     <label><input type="radio" name="` + reasoningNameBase + `" value="` + annotationOptions.reasoning[2] + `" > ` + annotationOptions.reasoning[2] + `</label>
+                                    <br>
+
+                                    <label><input type="radio" name="` + reasoningNameBase + `" value="` + annotationOptions.reasoning[3] + `" > ` + annotationOptions.reasoning[3] + `</label>
+                                    <br>
+
                                 </div>
                                 <br>
                             </div>
@@ -808,8 +834,17 @@
                                 <div>
                                     <strong>` + value + `:</strong><br/>
                                     <label><input type="radio" name="` + newInformationNameBase + `" value="` + annotationOptions.newInformation[0] + `" >` + annotationOptions.newInformation[0] + `</label>
+                                    <br>
+
                                     <label><input type="radio" name="` + newInformationNameBase + `" value="` + annotationOptions.newInformation[1] + `" > ` + annotationOptions.newInformation[1] + `</label>
+                                    <br>
+
                                     <label><input type="radio" name="` + newInformationNameBase + `" value="` + annotationOptions.newInformation[2] + `" > ` + annotationOptions.newInformation[2] + `</label>
+                                    <br>
+
+                                    <label><input type="radio" name="` + newInformationNameBase + `" value="` + annotationOptions.newInformation[3] + `" > ` + annotationOptions.newInformation[3] + `</label>
+                                    <br>
+
                                 </div>
                                 <br>
                             </div>
