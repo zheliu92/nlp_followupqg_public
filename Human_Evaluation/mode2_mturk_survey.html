@@ -660,7 +660,7 @@
             var keys = {{ task.row_data['id'] }};
             var questions = {{ task.row_data['question'] }};
             var answers = {{ task.row_data['answer'] }};
-            var followUpQuestions = {{ task.row_data['follow-ups'] }};
+            var followUpQuestions = {{ task.row_data['generated_follow_up'] }};
 
             // Test Code - comment out when in production
             // var keys = [1, 2, 3];
@@ -672,7 +672,7 @@
             var questionIndex = 0;
 
             // number of samples
-            const sampleCount = 20;
+            const sampleCount = keys.length;
 
             // Data to Annotate (LHS of survey)
             var dataToAnnotate = [questions, answers, followUpQuestions];
@@ -737,7 +737,7 @@
                     Object.entries(annotationQuestions).forEach(([key, value]) => {
                         if (key == 1) {
                             annotationQuestionsHTML += `
-                            <div class="ratings-group" data-question="` + key + `">
+                            <div class="first-question" data-question="` + key + `">
                                 <h4>Question ` + key + `:</h4>
                                 <br>
                                 <div>
@@ -827,7 +827,6 @@
             // Display remaining questions only if the user answers Yes to the Validity question
             function toggleRemainingQuestions(show) {
                 const remainingQuestions = document.querySelectorAll('.remaining-questions');
-                console.log(remainingQuestions)
                 remainingQuestions.forEach(element => {
                     element.style.display = show ? 'block' : 'none';
                 });
@@ -843,22 +842,30 @@
             // validates input to radio buttons before moving to the next task
             function validateCurrentStep() {
                 const questionBlock = document.querySelector(`#question-block-` + questionIndex);
+
                 if (!questionBlock) {
                     console.error('Question block not found!');
                     return false;
                 }
-                const ratingGroups = questionBlock.querySelectorAll('.ratings-group');
+                
+                // check the value of the first (validity) question
+                noRadioButton = questionBlock.querySelector('.first-question').querySelector('input[value="No"]:checked');   
+                if (noRadioButton) {
+                    return true
+                }
 
+                const ratingGroups = questionBlock.querySelectorAll('.ratings-group');
                 let valid = true;
 
                 ratingGroups.forEach(group => {
-                    const questionName = group.getAttribute('data-question');
-                    const selectedOption = document.querySelector(`input[type="radio"]:checked`);
+                    const radioSelected = group.querySelector('input[type="radio"]:checked');
+                    const checkboxSelected = group.querySelector('input[type="checkbox"]:checked');
 
-                    if (!selectedOption) {
-                        valid = false
+                    // Check if there's at least one selection for both input types
+                    if (!radioSelected && !checkboxSelected) {
+                        valid = false;
                     }
-                })
+                });
 
                 return valid
             }

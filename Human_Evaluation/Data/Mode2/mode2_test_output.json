@@ -1,0 +1,1104 @@
+[
+    {
+      "3000_1_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": true,
+        "Wrong Semantic Collocation": false
+      },
+      "3000_1_newInformation": {
+        "No new information": false,
+        "Yes, a lot": true,
+        "Yes, but few": false
+      },
+      "3000_1_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": true,
+        "Yes, but Slightly Simple": false
+      },
+      "3000_1_relevance": {
+        "No": false,
+        "Yes": true
+      },
+      "3000_1_validness": {
+        "No": false,
+        "Yes": true
+      },
+      "3000_2_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3000_2_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3000_2_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3000_2_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3000_2_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3000_3_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3000_3_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3000_3_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3000_3_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3000_3_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3000_4_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3000_4_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3000_4_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3000_4_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3000_4_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3001_1_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3001_1_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3001_1_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3001_1_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3001_1_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3001_2_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3001_2_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3001_2_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3001_2_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3001_2_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3001_3_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3001_3_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3001_3_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3001_3_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3001_3_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3001_4_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3001_4_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3001_4_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3001_4_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3001_4_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3001_5_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3001_5_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3001_5_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3001_5_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3001_5_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3002_1_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3002_1_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3002_1_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3002_1_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3002_1_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3002_2_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3002_2_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3002_2_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3002_2_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3002_2_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3002_3_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3002_3_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3002_3_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3002_3_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3002_3_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3003_1_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3003_1_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3003_1_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3003_1_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3003_1_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3003_2_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3003_2_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3003_2_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3003_2_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3003_2_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3003_3_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3003_3_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3003_3_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3003_3_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3003_3_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3003_4_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3003_4_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3003_4_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3003_4_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3003_4_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3004_1_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3004_1_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3004_1_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3004_1_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3004_1_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3004_2_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3004_2_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3004_2_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3004_2_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3004_2_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3004_3_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3004_3_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3004_3_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3004_3_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3004_3_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3004_4_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3004_4_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3004_4_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3004_4_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3004_4_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3005_1_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3005_1_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3005_1_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3005_1_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3005_1_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3005_2_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3005_2_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3005_2_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3005_2_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3005_2_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3005_3_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3005_3_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3005_3_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3005_3_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3005_3_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3005_4_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": true,
+        "Wrong Semantic Collocation": false
+      },
+      "3005_4_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": true
+      },
+      "3005_4_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": true
+      },
+      "3005_4_relevance": {
+        "No": false,
+        "Yes": true
+      },
+      "3005_4_validness": {
+        "No": false,
+        "Yes": true
+      },
+      "3006_1_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3006_1_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3006_1_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3006_1_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3006_1_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3006_2_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3006_2_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3006_2_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3006_2_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3006_2_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3006_3_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3006_3_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3006_3_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3006_3_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3006_3_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3006_4_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3006_4_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3006_4_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3006_4_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3006_4_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3006_5_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3006_5_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3006_5_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3006_5_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3006_5_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3006_6_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3006_6_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3006_6_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3006_6_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3006_6_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3007_1_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3007_1_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3007_1_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3007_1_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3007_1_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3007_2_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3007_2_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3007_2_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3007_2_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3007_2_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3007_3_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3007_3_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3007_3_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3007_3_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3007_3_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3007_4_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3007_4_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3007_4_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3007_4_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3007_4_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3007_5_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3007_5_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3007_5_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3007_5_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3007_5_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3008_1_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3008_1_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3008_1_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3008_1_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3008_1_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3008_2_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3008_2_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3008_2_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3008_2_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3008_2_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3008_3_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3008_3_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3008_3_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3008_3_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3008_3_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3008_4_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3008_4_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3008_4_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3008_4_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3008_4_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3009_1_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3009_1_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3009_1_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3009_1_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3009_1_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3009_2_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3009_2_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3009_2_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3009_2_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3009_2_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3009_3_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3009_3_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3009_3_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3009_3_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3009_3_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3009_4_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3009_4_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3009_4_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3009_4_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3009_4_validness": {
+        "No": true,
+        "Yes": false
+      },
+      "3009_5_error": {
+        "Context Copy": false,
+        "No Errors": false,
+        "Other Errors": false,
+        "Redundant": false,
+        "Wrong Semantic Collocation": false
+      },
+      "3009_5_newInformation": {
+        "No new information": false,
+        "Yes, a lot": false,
+        "Yes, but few": false
+      },
+      "3009_5_reasoning": {
+        "No Reasoning Required": false,
+        "Yes, and Very Hard": false,
+        "Yes, but Slightly Simple": false
+      },
+      "3009_5_relevance": {
+        "No": false,
+        "Yes": false
+      },
+      "3009_5_validness": {
+        "No": true,
+        "Yes": false
+      }
+    }
+  ]
