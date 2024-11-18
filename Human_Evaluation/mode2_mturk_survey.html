@@ -657,16 +657,16 @@
             };
 
             // MTURk Code 
-            // var keys = {{ task.row_data['id'] }};
-            // var questions = {{ task.row_data['question'] }};
-            // var answers = {{ task.row_data['answer'] }};
-            // var followUpQuestions = {{ task.row_data['generated_follow_up'] }};
+            var keys = {{ task.row_data['id'] }};
+            var questions = {{ task.row_data['question'] }};
+            var answers = {{ task.row_data['answer'] }};
+            var followUpQuestions = {{ task.row_data['generated_follow_up'] }};
 
             // Test Code - comment out when in production
-            var keys = [1, 2, 3];
-            var questions = ['1', '2', '3'];
-            var answers = ['1', '2', '3'];
-            var followUpQuestions = ['1', '2', '3'];
+            // var keys = [1, 2, 3];
+            // var questions = ['1', '2', '3'];
+            // var answers = ['1', '2', '3'];
+            // var followUpQuestions = ['1', '2', '3'];
 
             // Index to keep track of questions
             var questionIndex = 0;
@@ -739,9 +739,8 @@
                             annotationQuestionsHTML += `
                             <div class="first-question" data-question="` + key + `">
                                 <h4>Question ` + key + `:</h4>
-                                <br>
                                 <div>
-                                    <strong>` + value + `:</strong><br/>
+                                    <strong>` + value + `</strong><br/>
                                     <label><input type="radio" name="` + validnessNameBase + `" value="` + annotationOptions.binary[0] + `" required onclick=toggleRemainingQuestions(true)>` + annotationOptions.binary[0] + `</label>
                                     <br>
 
@@ -756,8 +755,8 @@
                             annotationQuestionsHTML += `
                             <div id="remaining-questions" class="remaining-questions">
                             <div class="ratings-group" data-question="` + key + `">
-                                <h4>Question ` + key + `:</h4>
                                 <br>
+                                <h4>Question ` + key + `</h4>
                                 <div>
                                     <strong>` + value + `:</strong><br/>
                                     <label><input type="radio" name="` + relevanceNameBase + `" value="` + annotationOptions.relatedness[0] + `">` + annotationOptions.relatedness[0] + `</label>
@@ -779,10 +778,10 @@
                         if (key == 3) {
                             annotationQuestionsHTML += `
                             <div class="ratings-group" data-question="` + key + `">
-                                <h4>Question ` + key + `:</h4>
                                 <br>
+                                <h4>Question ` + key + `:</h4>
                                 <div>
-                                    <strong>` + value + `:</strong><br/>
+                                    <strong>` + value + `</strong><br/>
                                     <label><input type="checkbox" name="` + errorNameBase + `" value="` + annotationOptions.errors[0] + `">` + annotationOptions.errors[0] + `</label>
                                     <br>
 
@@ -805,10 +804,10 @@
                         if (key == 4) {
                             annotationQuestionsHTML += `
                             <div class="ratings-group" data-question="` + key + `">
-                                <h4>Question ` + key + `:</h4>
                                 <br>
+                                <h4>Question ` + key + `:</h4>
                                 <div>
-                                    <strong>` + value + `:</strong><br/>
+                                    <strong>` + value + `</strong><br/>
                                     <label><input type="radio" name="` + reasoningNameBase + `" value="` + annotationOptions.reasoning[0] + `" >` + annotationOptions.reasoning[0] + `</label>
                                     <br>
 
@@ -829,8 +828,8 @@
                         if (key == 5) {
                             annotationQuestionsHTML += `
                             <div class="ratings-group" data-question="` + key + `">
-                                <h4>Question ` + key + `:</h4>
                                 <br>
+                                <h4>Question ` + key + `</h4>
                                 <div>
                                     <strong>` + value + `:</strong><br/>
                                     <label><input type="radio" name="` + newInformationNameBase + `" value="` + annotationOptions.newInformation[0] + `" >` + annotationOptions.newInformation[0] + `</label>

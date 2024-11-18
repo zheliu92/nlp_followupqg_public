@@ -686,7 +686,7 @@
             var questionIndex = 0;
 
             // number of samples
-            const sampleCount = 20;
+            const sampleCount = keys.length;
 
             // Data to Annotate (LHS of survey)
             var dataToAnnotate = [questions, answers, followUpQuestions];
@@ -745,11 +745,14 @@
                             annotationQuestionsHTML += `
                             <div class="ratings-group" data-question="` + key + `">
                                 <h4>Question ` + key + `:</h4>
-                                <br>
                                 <div>
-                                    <strong>` + value + `:</strong><br/>
+                                    <strong>` + value + `</strong><br/>
                                     <label><input type="radio" name="` + validnessNameBase + `" required>` + annotationOptions.binary[0] + `</label>
+                                    <br>
+
                                     <label><input type="radio" name="` + validnessNameBase + `" > ` + annotationOptions.binary[1] + `</label>
+                                    <br>
+
                                 </div>
                                 <br>
                             </div>
@@ -758,12 +761,15 @@
                         if (key == 2) {
                             annotationQuestionsHTML += `
                             <div class="ratings-group" data-question="` + key + `">
-                                <h4>Question ` + key + `:</h4>
                                 <br>
+                                <h4>Question ` + key + `:</h4>
                                 <div>
-                                    <strong>` + value + `:</strong><br/>
+                                    <strong>` + value + `</strong><br/>
                                     <label><input type="radio" name="` + appropriatenessNameBase + `" required>` + annotationOptions.binary[0] + `</label>
+                                    <br>
+
                                     <label><input type="radio" name="` + appropriatenessNameBase + `" > ` + annotationOptions.binary[1] + `</label>
+                                    <br>
                                 </div>
                                 <br>
                             </div>
@@ -772,17 +778,21 @@
                         if (key == 3) {
                             annotationQuestionsHTML += `
                             <div class="ratings-group" data-question="` + key + `">
-                                <h4>Question ` + key + `:</h4>
                                 <br>
+                                <h4>Question ` + key + `:</h4>
                                 <div>
-                                    <strong>` + value + `:</strong><br/>
+                                    <strong>` + value + `</strong><br/>
                                     <label><input type="radio" name="` + relatednessNameBase + `" required>` + annotationOptions.relatedness[0] + `</label>
+                                    <br>
 
                                     <label><input type="radio" name="` + relatednessNameBase + `" required>` + annotationOptions.relatedness[1] + `</label>
+                                    <br>
 
                                     <label><input type="radio" name="` + relatednessNameBase + `" required>` + annotationOptions.relatedness[2] + `</label>
+                                    <br>
 
                                     <label><input type="radio" name="` + relatednessNameBase + `" required>` + annotationOptions.relatedness[3] + `</label>
+                                    <br>
                                 </div>
                                 <br>
                             </div>
