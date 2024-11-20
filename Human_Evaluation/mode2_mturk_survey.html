@@ -383,8 +383,9 @@
                         </ol>
                     </div>
                     <br>
+                    <h3 style="color: red">Please Note:</h3>
                     <h4 style="color: red;">After answering all questions for a single task, click next to move to the
-                        next sample. <br>Once you complete all tasks, press submit to complete the survey.</h4>
+                        next sample. <br>Once you complete all tasks, press submit to complete the survey. <br>We will be manually evaluating a few of your responses to confirm that they are reasonable.</h4>
                     <br>
                 </div>
                 <div class="examples">
@@ -808,16 +809,16 @@
             };
 
             // MTURk Code 
-            // var keys = {{ task.row_data['id'] }};
-            // var questions = {{ task.row_data['question'] }};
-            // var answers = {{ task.row_data['answer'] }};
-            // var followUpQuestions = {{ task.row_data['generated_follow_up'] }};
+            var keys = {{ task.row_data['id'] }};
+            var questions = {{ task.row_data['question'] }};
+            var answers = {{ task.row_data['answer'] }};
+            var followUpQuestions = {{ task.row_data['generated_follow_up'] }};
 
             // Test Code - comment out when in production
-            var keys = [1, 2, 3];
-            var questions = ['1', '2', '3'];
-            var answers = ['1', '2', '3'];
-            var followUpQuestions = ['1', '2', '3'];
+            // var keys = [1, 2, 3];
+            // var questions = ['1', '2', '3'];
+            // var answers = ['1', '2', '3'];
+            // var followUpQuestions = ['1', '2', '3'];
 
             // Index to keep track of questions
             var questionIndex = 0;
