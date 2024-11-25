@@ -678,16 +678,16 @@
             };
 
             // MTURk Code 
-            // var keys = {{ task.row_data['id'] }};
-            // var questions = {{ task.row_data['question'] }};
-            // var answers = {{ task.row_data['answer'] }};
-            // var followUpQuestions = {{ task.row_data['follow-ups'] }};
+            var keys = {{ task.row_data['id'] }};
+            var questions = {{ task.row_data['question'] }};
+            var answers = {{ task.row_data['answer'] }};
+            var followUpQuestions = {{ task.row_data['follow-ups'] }};
 
             // Test Code - comment out when in production
-            var keys = [1,2,3];
-            var questions = ['1', '2', '3'];
-            var answers = ['1', '2', '3'];
-            var followUpQuestions = ['1', '2', '3'];
+            // var keys = [1,2,3];
+            // var questions = ['1', '2', '3'];
+            // var answers = ['1', '2', '3'];
+            // var followUpQuestions = ['1', '2', '3'];
 
             // Index to keep track of questions
             var questionIndex = 0;
@@ -753,11 +753,10 @@
                             <div class="ratings-group" data-question="` + key + `">
                                 <h4>Question ` + key + `:</h4>
                                 <div>
-                                    <strong>` + value + `</strong><br/>
-                                    <label><input type="radio" name="` + validnessNameBase + `" required>` + annotationOptions.binary[0] + `</label>
+                                    <label><input type="radio" name="` + validnessNameBase + `" value="` + annotationOptions.binary[0] + `" required>` + annotationOptions.binary[0] + `</label>
                                     <br>
 
-                                    <label><input type="radio" name="` + validnessNameBase + `" > ` + annotationOptions.binary[1] + `</label>
+                                    <label><input type="radio" name="` + validnessNameBase + `" value="` + annotationOptions.binary[1] + `" > ` + annotationOptions.binary[1] + `</label>
                                     <br>
 
                                 </div>
@@ -772,10 +771,10 @@
                                 <h4>Question ` + key + `:</h4>
                                 <div>
                                     <strong>` + value + `</strong><br/>
-                                    <label><input type="radio" name="` + appropriatenessNameBase + `" required>` + annotationOptions.binary[0] + `</label>
+                                    <label><input type="radio" name="` + appropriatenessNameBase + `" value="` + annotationOptions.binary[0] + `" >` + annotationOptions.binary[0] + `</label>
                                     <br>
 
-                                    <label><input type="radio" name="` + appropriatenessNameBase + `" > ` + annotationOptions.binary[1] + `</label>
+                                    <label><input type="radio" name="` + appropriatenessNameBase + `" value="` + annotationOptions.binary[1] + `" > ` + annotationOptions.binary[1] + `</label>
                                     <br>
                                 </div>
                                 <br>
@@ -789,16 +788,16 @@
                                 <h4>Question ` + key + `:</h4>
                                 <div>
                                     <strong>` + value + `</strong><br/>
-                                    <label><input type="radio" name="` + relatednessNameBase + `" required>` + annotationOptions.relatedness[0] + `</label>
+                                    <label><input type="radio" name="` + relatednessNameBase + `" value="` + annotationOptions.relatedness[0] + `" >` + annotationOptions.relatedness[0] + `</label>
                                     <br>
 
-                                    <label><input type="radio" name="` + relatednessNameBase + `" required>` + annotationOptions.relatedness[1] + `</label>
+                                    <label><input type="radio" name="` + relatednessNameBase + `" value="` + annotationOptions.relatedness[1] + `" >` + annotationOptions.relatedness[1] + `</label>
                                     <br>
 
-                                    <label><input type="radio" name="` + relatednessNameBase + `" required>` + annotationOptions.relatedness[2] + `</label>
+                                    <label><input type="radio" name="` + relatednessNameBase + `" value="` + annotationOptions.relatedness[2] + `" >` + annotationOptions.relatedness[2] + `</label>
                                     <br>
 
-                                    <label><input type="radio" name="` + relatednessNameBase + `" required>` + annotationOptions.relatedness[3] + `</label>
+                                    <label><input type="radio" name="` + relatednessNameBase + `" value="` + annotationOptions.relatedness[3] + `" >` + annotationOptions.relatedness[3] + `</label>
                                     <br>
                                 </div>
                                 <br>
