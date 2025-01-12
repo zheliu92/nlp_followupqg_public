@@ -678,16 +678,16 @@
             };
 
             // MTURk Code 
-            var keys = {{ task.row_data['id'] }};
-            var questions = {{ task.row_data['question'] }};
-            var answers = {{ task.row_data['answer'] }};
-            var followUpQuestions = {{ task.row_data['follow-ups'] }};
+            // var keys = {{ task.row_data['id'] }};
+            // var questions = {{ task.row_data['question'] }};
+            // var answers = {{ task.row_data['answer'] }};
+            // var followUpQuestions = {{ task.row_data['follow-ups'] }};
 
             // Test Code - comment out when in production
-            // var keys = [1,2,3];
-            // var questions = ['1', '2', '3'];
-            // var answers = ['1', '2', '3'];
-            // var followUpQuestions = ['1', '2', '3'];
+            var keys = [1,2,3];
+            var questions = ['1', '2', '3'];
+            var answers = ['1', '2', '3'];
+            var followUpQuestions = ['1', '2', '3'];
 
             // Index to keep track of questions
             var questionIndex = 0;
@@ -748,11 +748,13 @@
                     var annotationQuestionsHTML = `<div id="question-block-`+i+`" class="question-block" style="display: none;">`
 
                     Object.entries(annotationQuestions).forEach(([key, value]) => {
+                        console.log(key)
                         if (key == 1) {
                             annotationQuestionsHTML += `
                             <div class="ratings-group" data-question="` + key + `">
                                 <h4>Question ` + key + `:</h4>
                                 <div>
+                                    <strong>` + value + `</strong><br/>
                                     <label><input type="radio" name="` + validnessNameBase + `" value="` + annotationOptions.binary[0] + `" required>` + annotationOptions.binary[0] + `</label>
                                     <br>
 
