@@ -12,16 +12,14 @@ for model in models:
     with open(current_filename, 'r') as json_file:
         json_data = json.load(json_file)
 
-        max_score = {}
         scores = {metric: [] for metric in [
             'bert', 'nlp_similarity', 'bleu1', 'bleu2', 'bleu3', 'bleu4', 'rouge', 'meteor'
         ]}
 
         # Calculate max scores per case and store in scores dictionary
         for case in json_data:
-
             max_score = {metric: case[0][metric] for metric in scores}
-
+            
             for task in case[1:]:
                 for metric in scores:
                     max_score[metric] = max(max_score[metric], task[metric])
@@ -30,6 +28,13 @@ for model in models:
                 scores[metric].append(value)
                 data.append({'Model': model, 'Metric': metric, 'Score': value})  # Add for combined figure
 
+    # Print out the results in text format
+    print(f"\n=== {model.capitalize()} Model - Score Summary ===")
+    for metric, values in scores.items():
+        avg_score = sum(values) / len(values)
+        print(f"{metric}: {avg_score:.4f}")
+    print("=======================================\n")
+    
     # Plot each model's metrics as a separate bar plot with Seaborn
     plt.figure(figsize=(10, 6))
     sns.set(style="whitegrid")
@@ -44,19 +49,19 @@ for model in models:
     for bar in ax.patches:
         ax.annotate(
             format(bar.get_height(), ".2f"),
-            (bar.get_x() + bar.get_width() / 2, bar.get_height() + 0.02),  # Offset label above error bar
+            (bar.get_x() + bar.get_width() / 2, bar.get_height() + 0.02),
             ha='center', va='bottom', fontsize=10
         )
 
     plt.xticks(rotation=25, fontsize=12)
     plt.yticks(fontsize=12)
-    plt.ylim(0.0, 1.1)  # Increased limit for better label visibility
+    plt.ylim(0.0, 1.1)
     plt.title(f'{model.capitalize()} Model - Scores by Metric', fontsize=14, weight='bold')
     plt.xlabel('Metric', fontsize=12, weight='bold')
     plt.ylabel('Score', fontsize=12, weight='bold')
     plt.tight_layout()
     plt.savefig(f'Auto_Evaluation/{model}_scores_enhanced.png')
-    plt.close()  # Close figure to avoid overlap in loops
+    plt.close()
 
 # Create DataFrame for combined plot
 df = pd.DataFrame(data)
@@ -70,13 +75,13 @@ ax = sns.barplot(data=df, x='Metric', y='Score', hue='Model', palette='muted')
 for bar in ax.patches:
     ax.annotate(
         format(bar.get_height(), ".2f"),
-        (bar.get_x() + bar.get_width() / 2, bar.get_height() + 0.02),  # Offset label above error bar
+        (bar.get_x() + bar.get_width() / 2, bar.get_height() + 0.02),
         ha='center', va='bottom', fontsize=10
     )
 
 plt.xticks(rotation=25, fontsize=12)
 plt.yticks(fontsize=12)
-plt.ylim(0.0, 1.1)  # Increased limit for better label visibility
+plt.ylim(0.0, 1.1)
 plt.title('Model Performance Comparison by Metric', fontsize=16, weight='bold')
 plt.xlabel('Metric', fontsize=12, weight='bold')
 plt.ylabel('Score', fontsize=12, weight='bold')
