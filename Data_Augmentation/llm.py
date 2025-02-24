@@ -1,20 +1,15 @@
 from openai import OpenAI, AzureOpenAI
 import anthropic
 
-
 # call this function to get a response from the selected model given an instruction and a prompt
-def llm_response(instruction, prompt, is_claude=False):
-    # if is_claude:
-    #     return claude_response(instruction, prompt)
-    # return openai_response(instruction, prompt)
+def llm_response(instruction, prompt):
     return azure_response(instruction, prompt)
-
 
 def azure_response(instruction, prompt):
     try:
         azure_client = AzureOpenAI(
-            azure_endpoint='https://ubcnlpgpt4.openai.azure.com/', # copy the endpoint from the azure portal
-            api_key='5d830dce7597439091699136c45c675d', # copy the key from the azure portal
+            azure_endpoint='https://[REPLACE_WITH_AZURE_ENDPOINT]', # copy the endpoint from the azure portal
+            api_key='[REPLACE_WITH_API_KEY]', # copy the key from the azure portal
             api_version="2024-02-15-preview"
         )
 
@@ -32,39 +27,3 @@ def azure_response(instruction, prompt):
     if response.choices[0].message.content is None:
         return "LLM failed to generate a response"
     return response.choices[0].message.content
-
-#
-# def openai_response(instruction, prompt, model="gpt-4o"):
-#     client = OpenAI(api_key="sk-proj-8tSVsjs8qOaPbvut4XS3T3BlbkFJNDhTNRiiaH5nIebF9xbW")
-#     completion = client.chat.completions.create(
-#         model=model,
-#         messages=[
-#             {"role": "system", "content": instruction},
-#             {"role": "user", "content": prompt}
-#         ])
-#
-#     return completion.choices[0].message.content
-#
-#
-# def claude_response(instruction, prompt, model="claude-3-5-sonnet-20240620"):
-#     client = anthropic.Anthropic(
-#         api_key="")
-#
-#     message = client.messages.create(
-#         model=model,
-#         max_tokens=1000,
-#         temperature=0,
-#         system=instruction,
-#         messages=[
-#             {
-#                 "role": "user",
-#                 "content": [
-#                     {
-#                         "type": "text",
-#                         "text": prompt
-#                     }
-#                 ]
-#             }
-#         ]
-#     )
-#     return message.content[0].text
