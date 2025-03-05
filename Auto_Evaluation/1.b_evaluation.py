@@ -99,7 +99,7 @@ def get_auto_eval_result(task_sample, generate_id):
 # result_filename = model_version + "_result.json"
 # evaluation_filename = model_version + "_evaluation.json"
 
-for model_version in ["org", "small", "full", "gpt"]: # 
+for model_version in ["org", "full", "gpt"]: # 
     for mode in ['topkp']: # 'beam'
         result_filename = model_version + f"_result_repeat_{mode}.json"
         evaluation_filename = model_version + f"_evaluation_repeat_{mode}.json"
